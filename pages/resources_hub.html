@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources Hub - Clinicmaster Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- If using Tailwind CSS, ensure it's loaded. If not, add CDN below for testing: -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Explore Clinicmaster's comprehensive resource library including podcasts, webinars, blogs, and industry news updates. Stay informed with expert insights and thought leadership." />
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+    <!-- Monthly Updatable Status Bar -->
+        <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+            <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third hover:shadow-modal">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                
+                <!-- Mobile Features Dropdown -->
+                <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-primary-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-4">
+                    Healthcare Knowledge Hub
+                </h1>
+                <p class="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
+                    Discover insights, best practices, and industry updates from healthcare experts. Stay informed with our comprehensive resource library.
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search resources..." class="w-full px-4 py-3 pl-12 text-text-primary bg-white border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="w-5 h-5 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Type Filters -->
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <button class="filter-btn active" data-filter="all">All Content</button>
+                    <button class="filter-btn" data-filter="podcasts">Podcasts</button>
+                    <button class="filter-btn" data-filter="webinars">Webinars</button>
+                    <button class="filter-btn" data-filter="blogs">Blog Posts</button>
+                    <button class="filter-btn" data-filter="news">News Updates</button>
+                    <button class="filter-btn" data-filter="case-studies">Case Studies</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Content -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-secondary mb-8">Featured Content</h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Featured Article -->
+                <div class="lg:col-span-2 bg-gradient-to-br from-primary-50 to-accent-50 rounded-lg p-8 hover:shadow-modal transition-smooth">
+                    <div class="flex items-center mb-4">
+                        <span class="px-3 py-1 bg-primary text-white rounded-full text-sm font-medium">Featured Blog</span>
+                        <span class="ml-3 text-text-muted text-sm">December 15, 2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">
+                        The Future of Healthcare: AI-Powered Practice Management
+                    </h3>
+                    <p class="text-text-secondary mb-6">
+                        Explore how artificial intelligence is transforming healthcare practice management, from automated documentation to predictive analytics. Learn about real-world implementations and their impact on patient care.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Sarah Johnson" class="w-10 h-10 rounded-full object-cover mr-3" />
+                            <div>
+                                <p class="text-sm font-medium text-text-primary">Dr. Sarah Johnson</p>
+                                <p class="text-xs text-text-muted">Chief Medical Officer</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-sm text-text-muted">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Podcast -->
+                <div class="bg-surface-50 rounded-lg p-6 hover:shadow-modal transition-smooth">
+                    <div class="flex items-center mb-4">
+                        <span class="px-3 py-1 bg-success text-white rounded-full text-sm font-medium">Featured Podcast</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">
+                        Healthcare Leadership in Digital Transformation
+                    </h3>
+                    <p class="text-text-secondary mb-4">
+                        Join us as we discuss the challenges and opportunities of leading healthcare organizations through digital transformation.
+                    </p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm text-text-muted">Episode 42 • December 10, 2024</span>
+                        <span class="text-sm text-text-muted">45 min</span>
+                    </div>
+                    <button class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-smooth flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                        </svg>
+                        Play Episode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Grid -->
+    <section class="py-16 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <div class="grid md:grid-cols-2 gap-8" id="content-grid">
+                        
+                        <!-- Blog Post -->
+                        <article class="content-item bg-white rounded-lg shadow-soft hover:shadow-modal transition-smooth" data-category="blogs">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Practice Management Tips" class="w-full h-48 object-cover rounded-t-lg" />
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="px-2 py-1 bg-accent-100 text-accent-800 rounded text-xs font-medium">Blog Post</span>
+                                    <span class="ml-3 text-text-muted text-sm">December 8, 2024</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-3">
+                                    5 Essential Practice Management Tips for 2025
+                                </h3>
+                                <p class="text-text-secondary mb-4">
+                                    Discover proven strategies to streamline your practice operations and improve patient satisfaction in the new year.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-text-muted">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <span>6 min read</span>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-600 font-medium text-sm">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Webinar -->
+                        <article class="content-item bg-white rounded-lg shadow-soft hover:shadow-modal transition-smooth" data-category="webinars">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="HIPAA Compliance Webinar" class="w-full h-48 object-cover rounded-t-lg" />
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="px-2 py-1 bg-secondary-100 text-secondary-800 rounded text-xs font-medium">Webinar</span>
+                                    <span class="ml-3 text-text-muted text-sm">December 12, 2024</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-3">
+                                    HIPAA Compliance in the Digital Age
+                                </h3>
+                                <p class="text-text-secondary mb-4">
+                                    Learn about the latest HIPAA requirements and how to ensure your practice remains compliant with digital health records.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-text-muted">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                        </svg>
+                                        <span>60 min</span>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-600 font-medium text-sm">Watch Now</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Podcast -->
+                        <article class="content-item bg-white rounded-lg shadow-soft hover:shadow-modal transition-smooth" data-category="podcasts">
+                            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Healthcare Innovation Podcast" class="w-full h-48 object-cover rounded-t-lg" />
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="px-2 py-1 bg-success-100 text-success-600 rounded text-xs font-medium">Podcast</span>
+                                    <span class="ml-3 text-text-muted text-sm">December 5, 2024</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-3">
+                                    Innovation in Patient Care Technology
+                                </h3>
+                                <p class="text-text-secondary mb-4">
+                                    Explore cutting-edge technologies that are revolutionizing patient care and practice efficiency.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-text-muted">
+                                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span>32 min</span>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-600 font-medium text-sm">Listen Now</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- News Update -->
+                        <article class="content-item bg-white rounded-lg shadow-soft hover:shadow-modal transition-smooth" data-category="news">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Healthcare News" class="w-full h-48 object-cover rounded-t-lg" />
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="px-2 py-1 bg-warning-100 text-warning rounded text-xs font-medium">News Update</span>
+                                    <span class="ml-3 text-text-muted text-sm">December 3, 2024</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-3">
+                                    New Healthcare Regulations Coming in 2025
+                                </h3>
+                                <p class="text-text-secondary mb-4">
+                                    Stay informed about upcoming regulatory changes that will impact healthcare practices nationwide.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-text-muted">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                                        </svg>
+                                        <span>4 min read</span>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-600 font-medium text-sm">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Case Study -->
+                        <article class="content-item bg-white rounded-lg shadow-soft hover:shadow-modal transition-smooth" data-category="case-studies">
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Case Study" class="w-full h-48 object-cover rounded-t-lg" />
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="px-2 py-1 bg-primary-100 text-primary-600 rounded text-xs font-medium">Case Study</span>
+                                    <span class="ml-3 text-text-muted text-sm">November 28, 2024</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-3">
+                                    How City Medical Center Reduced Wait Times by 40%
+                                </h3>
+                                <p class="text-text-secondary mb-4">
+                                    Discover how one medical center transformed their patient flow using our scheduling optimization tools.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-text-muted">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                        </svg>
+                                        <span>10 min read</span>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-600 font-medium text-sm">View Study</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Additional Blog Post -->
+                        <article class="content-item bg-white rounded-lg shadow-soft hover:shadow-modal transition-smooth" data-category="blogs">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="EHR Implementation" class="w-full h-48 object-cover rounded-t-lg" />
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="px-2 py-1 bg-accent-100 text-accent-800 rounded text-xs font-medium">Blog Post</span>
+                                    <span class="ml-3 text-text-muted text-sm">November 25, 2024</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-3">
+                                    EHR Implementation: A Step-by-Step Guide
+                                </h3>
+                                <p class="text-text-secondary mb-4">
+                                    Navigate the complexities of electronic health record implementation with our comprehensive guide.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-text-muted">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <span>12 min read</span>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-600 font-medium text-sm">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-12">
+                        <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 transition-smooth">
+                            Load More Content
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Newsletter Signup -->
+                    <div class="bg-white rounded-lg p-6 shadow-soft mb-8">
+                        <h3 class="text-lg font-semibold text-text-primary mb-4">Stay Updated</h3>
+                        <p class="text-text-secondary mb-4">Get the latest healthcare insights delivered to your inbox.</p>
+                        <form class="space-y-3">
+                            <input type="email" placeholder="Enter your email" class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+                            <button type="submit" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary-600 transition-smooth">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Popular Topics -->
+                    <div class="bg-white rounded-lg p-6 shadow-soft mb-8">
+                        <h3 class="text-lg font-semibold text-text-primary mb-4">Popular Topics</h3>
+                        <div class="space-y-2">
+                            <a href="#" class="block text-text-secondary hover:text-primary transition-smooth">Practice Management</a>
+                            <a href="#" class="block text-text-secondary hover:text-primary transition-smooth">Technology Updates</a>
+                            <a href="#" class="block text-text-secondary hover:text-primary transition-smooth">Regulatory Changes</a>
+                            <a href="#" class="block text-text-secondary hover:text-primary transition-smooth">Clinical Insights</a>
+                            <a href="#" class="block text-text-secondary hover:text-primary transition-smooth">Patient Experience</a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Episodes -->
+                    <div class="bg-white rounded-lg p-6 shadow-soft">
+                        <h3 class="text-lg font-semibold text-text-primary mb-4">Recent Podcast Episodes</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=100&auto=format&fit=crop" alt="Podcast" class="w-12 h-12 rounded object-cover mr-3" />
+                                <div>
+                                    <h4 class="text-sm font-medium text-text-primary">Healthcare Leadership</h4>
+                                    <p class="text-xs text-text-muted">Episode 41 • 38 min</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=100&auto=format&fit=crop" alt="Podcast" class="w-12 h-12 rounded object-cover mr-3" />
+                                <div>
+                                    <h4 class="text-sm font-medium text-text-primary">Digital Health Trends</h4>
+                                    <p class="text-xs text-text-muted">Episode 40 • 42 min</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=100&auto=format&fit=crop" alt="Podcast" class="w-12 h-12 rounded object-cover mr-3" />
+                                <div>
+                                    <h4 class="text-sm font-medium text-text-primary">Patient Care Innovation</h4>
+                                    <p class="text-xs text-text-muted">Episode 39 • 35 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const contentItems = document.querySelectorAll('.content-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filter = this.dataset.filter;
+
+                    contentItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        
+        // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+    </script>
+
+    <style>
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #E2E8F0;
+            background: white;
+            border-radius: 0.5rem;
+            color: #64748B;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background: #F3F0F4;
+            border-color: #5E3869;
+            color: #5E3869;
+        }
+
+        .filter-btn.active {
+            background: #5E3869;
+            border-color: #5E3869;
+            color: white;
+        }
+    </style>
+</body>
+</html>

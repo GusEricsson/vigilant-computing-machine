@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How we care - Clinicmaster Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Comprehensive implementation roadmap and ongoing support ecosystem for successful practice transformation with minimal disruption." />
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+        <!-- Monthly Updatable Status Bar -->
+        <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+            <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third hover:shadow-modal">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base">Home</a>
+
+                <!-- Mobile Features Dropdown -->
+                <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-primary-50 overflow-hidden">
+        <div class="absolute inset-0 bg-white/50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                        Seamless Implementation,<br />
+                        <span class="text-primary">Ongoing Success</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 max-w-2xl">
+                        Transform your practice with confidence through our structured implementation roadmap and comprehensive support ecosystem designed for minimal disruption and maximum success.
+                    </p>
+                    
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-bold text-primary mb-1">6 Weeks</div>
+                            <div class="text-sm text-text-muted">Average Implementation</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-bold text-primary mb-1">98%</div>
+                            <div class="text-sm text-text-muted">Implementation Success Rate</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#implementation-roadmap" class="btn-secondary text-center">View Implementation Plan</a>
+                        <a href="#support-contact" class="px-6 py-3 bg-white border border-secondary text-secondary rounded-lg font-semibold hover:bg-secondary hover:text-white transition-smooth text-center">Contact Support Team</a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Healthcare team training and implementation" class="rounded-lg shadow-modal w-full h-96 object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Roadmap -->
+    <section id="implementation-roadmap" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Structured Implementation Roadmap</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">A proven 6-week process designed to transform your practice with minimal disruption and maximum efficiency</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Phase 1: Discovery & Planning -->
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold mr-4">1</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-secondary">Discovery & Planning</h3>
+                                <p class="text-text-muted">Week 1-2</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary mb-6">Comprehensive assessment of your current workflows, data requirements, and practice-specific needs to create a customized implementation plan.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Practice Assessment</h4>
+                                    <p class="text-text-secondary text-sm">Current system evaluation and workflow analysis</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Custom Configuration</h4>
+                                    <p class="text-text-secondary text-sm">Tailored setup based on specialty and practice size</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Timeline Planning</h4>
+                                    <p class="text-text-secondary text-sm">Detailed project schedule with key milestones</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Healthcare planning and assessment" class="rounded-lg shadow-soft w-full h-80 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                    </div>
+                </div>
+
+                <!-- Phase 2: Data Migration & Setup -->
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="https://images.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt="Data migration and system setup" class="rounded-lg shadow-soft w-full h-80 object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-accent-800 rounded-lg flex items-center justify-center text-white font-bold mr-4">2</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-secondary">Data Migration & Setup</h3>
+                                <p class="text-text-muted">Week 3-4</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary mb-6">Secure transfer of patient records, appointment histories, and billing information with guaranteed data integrity and zero downtime transitions.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Secure Data Transfer</h4>
+                                    <p class="text-text-secondary text-sm">HIPAA-compliant migration with encryption</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Zero Downtime</h4>
+                                    <p class="text-text-secondary text-sm">Seamless transition without practice interruption</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Data Integrity Guarantee</h4>
+                                    <p class="text-text-secondary text-sm">100% accuracy verification and validation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Staff Training & Go-Live -->
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-success rounded-lg flex items-center justify-center text-white font-bold mr-4">3</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-secondary">Staff Training & Go-Live</h3>
+                                <p class="text-text-muted">Week 5-6</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary mb-6">Comprehensive training programs through multiple formats with hands-on support during your go-live transition.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Live Virtual Sessions</h4>
+                                    <p class="text-text-secondary text-sm">Interactive training with real-time Q&A</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">On-Demand Resources</h4>
+                                    <p class="text-text-secondary text-sm">Video library and documentation access</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Go-Live Support</h4>
+                                    <p class="text-text-secondary text-sm">Dedicated support team during transition</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2926&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Healthcare staff training session" class="rounded-lg shadow-soft w-full h-80 object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg'; this.onerror=null;" />
+                    </div>
+                </div>
+
+                <!-- Phase 4: Optimization & Support -->
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ongoing optimization and support" class="rounded-lg shadow-soft w-full h-80 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2926&auto=format&fit=crop'; this.onerror=null;" />
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-white font-bold mr-4">4</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-secondary">Optimization & Support</h3>
+                                <p class="text-text-muted">Ongoing</p>
+                            </div>
+                        </div>
+                        <p class="text-text-secondary mb-6">Continuous optimization and comprehensive support ecosystem to ensure long-term success and practice growth.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Performance Monitoring</h4>
+                                    <p class="text-text-secondary text-sm">Regular system optimization and updates</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Success Metrics Tracking</h4>
+                                    <p class="text-text-secondary text-sm">ROI measurement and improvement identification</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-success mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Continuous Training</h4>
+                                    <p class="text-text-secondary text-sm">Ongoing education and feature updates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Comprehensive Training Programs</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Multiple learning formats designed to accommodate different learning styles and schedules</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Live Virtual Sessions -->
+                <div class="bg-white rounded-lg p-6 shadow-soft hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Live Virtual Sessions</h3>
+                    <p class="text-text-secondary text-sm mb-4">Interactive training with real-time Q&A and hands-on practice with expert trainers.</p>
+                    <div class="text-primary text-sm font-medium">2-3 sessions per week</div>
+                </div>
+
+                <!-- On-Demand Library -->
+                <div class="bg-white rounded-lg p-6 shadow-soft hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">On-Demand Video Library</h3>
+                    <p class="text-text-secondary text-sm mb-4">Comprehensive video tutorials organized by role and specialty, available 24/7.</p>
+                    <div class="text-primary text-sm font-medium">200+ training videos</div>
+                </div>
+
+                <!-- Hands-On Workshops -->
+                <div class="bg-white rounded-lg p-6 shadow-soft hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Hands-On Workshops</h3>
+                    <p class="text-text-secondary text-sm mb-4">Practice-specific workshops with real scenarios and workflow simulations.</p>
+                    <div class="text-primary text-sm font-medium">Weekly sessions</div>
+                </div>
+
+                <!-- Certification Programs -->
+                <div class="bg-white rounded-lg p-6 shadow-soft hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Certification Programs</h3>
+                    <p class="text-text-secondary text-sm mb-4">Super user certification with advanced training and ongoing education credits.</p>
+                    <div class="text-primary text-sm font-medium">Professional certification</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Ecosystem -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">24/7 Support Ecosystem</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Comprehensive support infrastructure designed to keep your practice running smoothly</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Multi-Channel Support</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">24/7 Phone Support</h4>
+                                <p class="text-text-secondary">Direct access to technical experts with priority response times based on issue severity.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">Live Chat Support</h4>
+                                <p class="text-text-secondary">Instant messaging with support agents for quick questions and troubleshooting.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-success-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">Video Call Support</h4>
+                                <p class="text-text-secondary">Screen sharing sessions for complex issues and personalized training.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">Priority Ticketing</h4>
+                                <p class="text-text-secondary">Structured support requests with guaranteed response times and issue tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Customer support team" class="rounded-lg shadow-modal w-full h-96 object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                </div>
+            </div>
+
+            <!-- Support Response Times -->
+            <div class="bg-surface-50 rounded-lg p-8">
+                <h3 class="text-xl font-bold text-secondary mb-6 text-center">Guaranteed Response Times</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-error-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-secondary mb-1">Critical Issues</h4>
+                        <p class="text-2xl font-bold text-error mb-1">15 min</p>
+                        <p class="text-text-muted text-sm">System down, data loss</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-warning-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-secondary mb-1">High Priority</h4>
+                        <p class="text-2xl font-bold text-warning mb-1">2 hours</p>
+                        <p class="text-text-muted text-sm">Major functionality issues</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-secondary mb-1">Standard</h4>
+                        <p class="text-2xl font-bold text-primary mb-1">8 hours</p>
+                        <p class="text-text-muted text-sm">General questions, training</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-secondary mb-1">Low Priority</h4>
+                        <p class="text-2xl font-bold text-success mb-1">24 hours</p>
+                        <p class="text-text-muted text-sm">Feature requests, enhancements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base & Community -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Knowledge Base & Community</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Self-service resources and peer-to-peer support for immediate assistance</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Knowledge Base -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary">Comprehensive Knowledge Base</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">1,500+ searchable articles and guides</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Video tutorials organized by specialty</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Workflow templates and best practices</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Role-based content organization</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <a href="#" class="text-primary font-medium hover:text-primary-600 transition-smooth">
+                            Browse Knowledge Base →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Community Forum -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                <path d="M6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-secondary">Community Forum</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Peer-to-peer support and networking</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Best practice sharing and tips</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Expert moderators and guidance</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Specialty-specific discussion groups</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <a href="#" class="text-primary font-medium hover:text-primary-600 transition-smooth">
+                            Join Community Forum →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Case Studies -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Real Implementation Success Stories</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">See how different practice types successfully deployed Clinicmaster with specific timelines and challenges overcome</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Family Practice Case Study -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Jennifer Martinez" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-semibold text-secondary">Martinez Family Practice</h3>
+                            <p class="text-text-muted text-sm">3 providers, 2 locations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary mb-2">Challenge</h4>
+                        <p class="text-text-secondary text-sm">Paper-based system causing 3+ hours daily admin work per provider</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary mb-2">Implementation Timeline</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Discovery & Setup</span>
+                                <span class="text-text-muted">2 weeks</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Data Migration</span>
+                                <span class="text-text-muted">1 week</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Training & Go-Live</span>
+                                <span class="text-text-muted">2 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-border pt-4">
+                        <h4 class="font-semibold text-secondary mb-2">Results</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="text-success">• 60% reduction in admin time</div>
+                            <div class="text-success">• 25% increase in patient satisfaction</div>
+                            <div class="text-success">• Zero data loss during migration</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cardiology Practice Case Study -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dr. Robert Kim" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-semibold text-secondary">Heart Center of Excellence</h3>
+                            <p class="text-text-muted text-sm">8 providers, specialized equipment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary mb-2">Challenge</h4>
+                        <p class="text-text-secondary text-sm">Complex device integrations and specialized cardiac workflows</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary mb-2">Implementation Timeline</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Discovery & Planning</span>
+                                <span class="text-text-muted">3 weeks</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Device Integration</span>
+                                <span class="text-text-muted">2 weeks</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Training & Go-Live</span>
+                                <span class="text-text-muted">3 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-border pt-4">
+                        <h4 class="font-semibold text-secondary mb-2">Results</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="text-success">• Seamless ECG integration</div>
+                            <div class="text-success">• 40% faster diagnostic reporting</div>
+                            <div class="text-success">• Improved care coordination</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Location Practice Case Study -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg" alt="Dr. Sarah Thompson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-semibold text-secondary">Regional Health Network</h3>
+                            <p class="text-text-muted text-sm">15 providers, 5 locations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary mb-2">Challenge</h4>
+                        <p class="text-text-secondary text-sm">Coordinating implementation across multiple locations and specialties</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-secondary mb-2">Implementation Timeline</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Phased Planning</span>
+                                <span class="text-text-muted">4 weeks</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Rollout (3 phases)</span>
+                                <span class="text-text-muted">8 weeks</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Optimization</span>
+                                <span class="text-text-muted">4 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-border pt-4">
+                        <h4 class="font-semibold text-secondary mb-2">Results</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="text-success">• Unified patient records</div>
+                            <div class="text-success">• 35% improvement in efficiency</div>
+                            <div class="text-success">• Enhanced inter-location coordination</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Implementation Success Metrics</h2>
+                <p class="text-xl text-primary-100 max-w-3xl mx-auto">Proven track record of successful practice transformations</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold mb-2">98%</div>
+                    <div class="text-primary-100">Implementation Success Rate</div>
+                </div>
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold mb-2">6 Weeks</div>
+                    <div class="text-primary-100">Average Implementation Time</div>
+                </div>
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold mb-2">4.9/5</div>
+                    <div class="text-primary-100">Implementation Satisfaction Score</div>
+                </div>
+                <div>
+                    <div class="text-4xl lg:text-5xl font-bold mb-2">30 Days</div>
+                    <div class="text-primary-100">Average Time to Value</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Contact Section -->
+    <section id="support-contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-6">Ready to Start Your Implementation Journey?</h2>
+            <p class="text-xl text-text-secondary mb-8">Connect with our implementation specialists to create your customized transformation roadmap.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-secondary mb-2">Call Support</h3>
+                    <p class="text-text-secondary text-sm mb-2">24/7 phone support</p>
+                    <a href="tel:1-800-CLINIC-PRO" class="text-primary font-medium">1-800-CLINIC-PRO</a>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-secondary mb-2">Email Support</h3>
+                    <p class="text-text-secondary text-sm mb-2">Implementation specialists</p>
+                    <a href="mailto:implementation@clinicmasterpro.com" class="text-primary font-medium">implementation@clinicmasterpro.com</a>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-secondary mb-2">Live Chat</h3>
+                    <p class="text-text-secondary text-sm mb-2">Instant messaging support</p>
+                    <button class="text-primary font-medium" onclick="openLiveChat()">Start Chat</button>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="platform_demo.html" class="btn-secondary hover:shadow-modal">Schedule Implementation Consultation</a>
+                <a href="pricing_roi_calculator.html" class="px-8 py-4 bg-white border border-secondary text-secondary rounded-lg font-semibold hover:bg-secondary hover:text-white transition-smooth">Calculate Implementation ROI</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openLiveChat() {
+            // Placeholder for live chat functionality
+            alert('Live chat would open here in a real implementation');
+        }
+
+        
+        // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+    </script>
+</body>
+</html>

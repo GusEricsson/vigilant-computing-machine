@@ -1,0 +1,59 @@
+/*
+  CMBrandColors.css
+  Custom Clinicmaster Brand Colors for use in your project.
+  Usage: Add this file to your HTML <head> or import in your main CSS.
+*/
+
+:root {
+  --cm-primary: #2E86AB;
+  --cm-primary-50: #EBF5F9;
+  --cm-primary-100: #D7EBF3;
+  --cm-primary-200: #AFD7E7;
+  --cm-primary-300: #87C3DB;
+  --cm-primary-400: #5FA5C3;
+  --cm-primary-500: #2E86AB;
+  --cm-primary-600: #256B89;
+  --cm-primary-700: #1C5067;
+  --cm-primary-800: #133545;
+  --cm-primary-900: #0A1A23;
+
+  --cm-secondary: #0F4C75;
+  --cm-secondary-50: #E6EDF4;
+  --cm-secondary-100: #CCDBE9;
+  --cm-secondary-200: #99B7D3;
+  --cm-secondary-300: #6693BD;
+  --cm-secondary-400: #336FA7;
+  --cm-secondary-500: #0F4C75;
+  --cm-secondary-600: #0C3D5E;
+  --cm-secondary-700: #092E47;
+  --cm-secondary-800: #061F30;
+  --cm-secondary-900: #030F18;
+
+  --cm-third: #23C399;
+
+  --cm-accent: #A8DADC;
+  --cm-accent-50: #F4FBFB;
+  --cm-accent-100: #E9F7F7;
+  --cm-accent-200: #D3EFEF;
+  --cm-accent-300: #BDE7E7;
+  --cm-accent-400: #A8DADC;
+  --cm-accent-500: #8BCBCD;
+  --cm-accent-600: #6EBCBE;
+  --cm-accent-700: #51ADAF;
+  --cm-accent-800: #349EA0;
+  --cm-accent-900: #178F91;
+
+  --cm-success: #10B981;
+  --cm-warning: #F59E0B;
+  --cm-error: #EF4444;
+  --cm-surface: #F8FAFB;
+  --cm-background: #FEFEFE;
+  --cm-text-primary: #1A2332;
+  --cm-text-secondary: #64748B;
+  --cm-text-muted: #94A3B8;
+}
+
+/* Example usage:
+   background-color: var(--cm-primary);
+   color: var(--cm-text-primary);
+*/

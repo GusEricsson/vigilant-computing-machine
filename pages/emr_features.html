@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMR Features - Clinicmaster Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover Clinicmaster's comprehensive Electronic Medical Record system with unified patient charts, clinical documentation, and advanced charting capabilities." />
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+        <!-- Monthly Updatable Status Bar -->
+    <!-- Monthly Updatable Status Bar -->
+        <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+            <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                
+                <!-- Mobile Features Dropdown -->
+                <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-secondary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                        Complete Electronic Medical Record <span class="text-secondary">Streamlines Clinical Workflows</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 max-w-2xl">
+                        Unified patient charts with real-time data synchronization, customizable templates, and intelligent clinical decision support designed to enhance patient care quality.
+                    </p>
+                    
+                    <!-- Key Benefits -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Unified patient charts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Real-time sync</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Clinical decision support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Specialty templates</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="platform_demo.html" class="btn-primary text-center">Explore EMR Demo</a>
+                        <button onclick="scrollToDemo()" class="px-6 py-3 bg-white border border-primary text-primary rounded-lg font-semibold hover:bg-primary-50 transition-smooth text-center">
+                            View Patient Chart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white rounded-lg shadow-modal p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-secondary">Patient: Sarah Johnson</h3>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-success rounded-full mr-2"></div>
+                                <span class="text-sm text-success">Active Chart</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-sm text-text-secondary">DOB</div>
+                                <div class="font-medium text-secondary">March 15, 1985</div>
+                            </div>
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-sm text-text-secondary">MRN</div>
+                                <div class="font-medium text-secondary">MR-7891234</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-primary pl-4">
+                                <div class="text-sm font-medium text-secondary">Current Visit</div>
+                                <div class="text-sm text-text-secondary">Annual physical exam - July 16, 2025</div>
+                            </div>
+                            
+                            <div class="bg-warning-50 rounded-lg p-3">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-warning">Allergies</span>
+                                </div>
+                                <div class="text-sm text-warning">Penicillin - severe reaction</div>
+                            </div>
+                            
+                            <div class="bg-primary-50 rounded-lg p-3">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-primary">Current Medications</span>
+                                </div>
+                                <div class="text-sm text-primary">Lisinopril 10mg daily, Metformin 500mg BID</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Documentation Module -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Clinical Documentation</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Customizable templates for different specialties with structured data entry and automated clinical decision support</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Specialty Templates</h3>
+                            <p class="text-text-secondary">Pre-built and customizable templates for over 30 medical specialties including cardiology, orthopedics, and family medicine.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Structured Data Entry</h3>
+                            <p class="text-text-secondary">Intelligent forms that adapt based on patient conditions and automatically populate relevant fields from previous visits.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Clinical Decision Support</h3>
+                            <p class="text-text-secondary">AI-powered alerts and suggestions for diagnosis, treatment plans, and preventive care based on patient history and evidence-based guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Documentation Template Example</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Chief Complaint</h4>
+                                <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Required</span>
+                            </div>
+                            <div class="bg-surface-50 rounded p-2">
+                                <input type="text" class="w-full border-none bg-transparent text-sm text-text-secondary" placeholder="Enter chief complaint..." />
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">History of Present Illness</h4>
+                                <span class="text-xs bg-accent-50 text-accent-800 px-2 py-1 rounded">Smart Template</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-2" />
+                                    <span class="text-sm text-text-secondary">Onset: Gradual / Sudden</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-2" />
+                                    <span class="text-sm text-text-secondary">Duration: Hours / Days / Weeks</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-2" />
+                                    <span class="text-sm text-text-secondary">Severity: Mild / Moderate / Severe</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-success">Clinical Suggestion</span>
+                            </div>
+                            <p class="text-sm text-success">Consider ordering ECG based on patient's cardiac history and current symptoms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Management Module -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Comprehensive Patient Management</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Complete patient profiles with medical history, allergies, medications, and care plans integrated into a unified view</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Patient Profiles -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Complete Patient Profiles</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Demographics</span>
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Insurance Info</span>
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm text-text-secondary">Emergency Contacts</span>
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">360-degree view of patient information with automated data validation and duplicate detection.</p>
+                </div>
+
+                <!-- Medical History -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Medical History Timeline</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-primary pl-3">
+                                <div class="text-sm font-medium text-secondary">2025</div>
+                                <div class="text-xs text-text-secondary">Hypertension diagnosed</div>
+                            </div>
+                            <div class="border-l-4 border-accent pl-3">
+                                <div class="text-sm font-medium text-secondary">2023</div>
+                                <div class="text-xs text-text-secondary">Type 2 diabetes onset</div>
+                            </div>
+                            <div class="border-l-4 border-success pl-3">
+                                <div class="text-sm font-medium text-secondary">2020</div>
+                                <div class="text-xs text-text-secondary">Appendectomy</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Chronological medical history with visit summaries and condition tracking.</p>
+                </div>
+
+                <!-- Care Plans -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Integrated Care Plans</h3>
+                    <div class="bg-success-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-success">Diabetes management plan</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-warning">Preventive care due</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-primary">Follow-up scheduled</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Automated care plan generation with task tracking and outcome monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Charting Features -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Advanced Charting Features</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Voice-to-text documentation, smart forms, and automated quality measure tracking for enhanced clinical efficiency</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Smart Charting Interface</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Voice-to-Text Active</h4>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-success rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-xs text-success">Listening</span>
+                                </div>
+                            </div>
+                            <div class="bg-surface-50 rounded p-3">
+                                <p class="text-sm text-text-secondary italic">"Patient presents with chest pain radiating to left arm, onset 2 hours ago, pain scale 8/10..."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Smart Form Adaptation</h4>
+                                <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Auto-populated</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="mr-2" />
+                                    <span class="text-sm text-text-secondary">Cardiac risk assessment</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="mr-2" />
+                                    <span class="text-sm text-text-secondary">Pain assessment scale</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="mr-2" />
+                                    <span class="text-sm text-text-secondary">ECG interpretation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-success">Quality Measures</span>
+                            </div>
+                            <div class="text-sm text-success">Diabetes HbA1c tracking: On target</div>
+                            <div class="text-sm text-success">Hypertension monitoring: Compliant</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Voice-to-Text Documentation</h3>
+                            <p class="text-text-secondary">Advanced speech recognition with medical terminology support that accurately captures clinical notes in real-time.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Smart Forms</h3>
+                            <p class="text-text-secondary">Intelligent forms that dynamically adapt based on patient conditions and automatically populate fields from previous visits.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Quality Measure Tracking</h3>
+                            <p class="text-text-secondary">Automated tracking of quality measures and reporting requirements with real-time compliance monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medication Management -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Medication Management</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">E-prescribing capabilities with drug interaction checking, formulary compliance, and prescription history tracking</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- E-Prescribing -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 0a1 1 0 100 2h.01a1 1 0 100-2H9zm2 0a1 1 0 100 2h.01a1 1 0 100-2H11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">E-Prescribing</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-text-secondary">Direct pharmacy integration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-text-secondary">Electronic signature</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-text-secondary">Controlled substance support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Seamless electronic prescribing with real-time pharmacy verification and delivery tracking.</p>
+                </div>
+
+                <!-- Drug Interaction Checking -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Drug Interaction Alerts</h3>
+                    <div class="bg-warning-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-4 h-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm font-medium text-warning">Moderate Interaction</span>
+                        </div>
+                        <p class="text-sm text-warning">Warfarin + Aspirin: Increased bleeding risk. Consider alternative or dosage adjustment.</p>
+                        <div class="mt-2">
+                            <button class="text-xs bg-white text-warning px-2 py-1 rounded">View Alternatives</button>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Real-time drug interaction checking with severity ratings and alternative suggestions.</p>
+                </div>
+
+                <!-- Prescription History -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Prescription History</h3>
+                    <div class="bg-success-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-primary pl-3">
+                                <div class="text-sm font-medium text-secondary">Lisinopril 10mg</div>
+                                <div class="text-xs text-text-secondary">Prescribed: Jan 2025 • Active</div>
+                            </div>
+                            <div class="border-l-4 border-success pl-3">
+                                <div class="text-sm font-medium text-secondary">Metformin 500mg</div>
+                                <div class="text-xs text-text-secondary">Prescribed: Dec 2024 • Filled</div>
+                            </div>
+                            <div class="border-l-4 border-gray-300 pl-3">
+                                <div class="text-sm font-medium text-secondary">Amoxicillin 500mg</div>
+                                <div class="text-xs text-text-secondary">Prescribed: Nov 2024 • Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Complete prescription history with adherence tracking and refill reminders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Integration -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Lab Integration</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Seamless lab results incorporation with trending analysis and abnormal value alerts</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Automated Lab Results</h3>
+                            <p class="text-text-secondary">Direct integration with major lab providers for automatic result import and chart integration without manual data entry.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Trending Analysis</h3>
+                            <p class="text-text-secondary">Visual trending charts show patterns in lab values over time with predictive insights for patient health monitoring.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Abnormal Value Alerts</h3>
+                            <p class="text-text-secondary">Immediate notifications for critical lab values with severity-based alerts and recommended follow-up actions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Lab Results Dashboard</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Complete Blood Count</h4>
+                                <span class="text-xs bg-success-50 text-success px-2 py-1 rounded">Normal</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-xs text-text-secondary">WBC</div>
+                                    <div class="text-sm font-medium text-secondary">7.2 K/μL</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-text-secondary">RBC</div>
+                                    <div class="text-sm font-medium text-secondary">4.5 M/μL</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-text-secondary">Hemoglobin</div>
+                                    <div class="text-sm font-medium text-secondary">14.2 g/dL</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-text-secondary">Hematocrit</div>
+                                    <div class="text-sm font-medium text-secondary">42.1%</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Comprehensive Metabolic Panel</h4>
+                                <span class="text-xs bg-warning-50 text-warning px-2 py-1 rounded">Abnormal</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-xs text-text-secondary">Glucose</div>
+                                    <div class="text-sm font-medium text-warning">165 mg/dL ↑</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-text-secondary">Creatinine</div>
+                                    <div class="text-sm font-medium text-secondary">1.0 mg/dL</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-text-secondary">eGFR</div>
+                                    <div class="text-sm font-medium text-secondary">88 mL/min</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-text-secondary">BUN</div>
+                                    <div class="text-sm font-medium text-secondary">18 mg/dL</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-warning-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-warning">Critical Alert</span>
+                            </div>
+                            <p class="text-sm text-warning">Elevated glucose levels indicate poor diabetes control. Consider medication adjustment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Coordination -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Care Coordination</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Referral management, care team communication, and patient portal integration for enhanced engagement</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Referral Management -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2A5 5 0 0011 9H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Referral Management</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Cardiology</span>
+                                <span class="text-xs bg-success-50 text-success px-2 py-1 rounded">Scheduled</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Dermatology</span>
+                                <span class="text-xs bg-warning-50 text-warning px-2 py-1 rounded">Pending</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Orthopedics</span>
+                                <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Streamlined referral process with automated tracking and specialist communication.</p>
+                </div>
+
+                <!-- Care Team Communication -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Care Team Communication</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <span class="text-xs font-medium text-primary">DR</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-secondary">Dr. Johnson</div>
+                                    <div class="text-xs text-text-secondary">Lab results reviewed, increase insulin dose</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <span class="text-xs font-medium text-accent-800">RN</span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-secondary">Nurse Sarah</div>
+                                    <div class="text-xs text-text-secondary">Patient education completed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Secure messaging and collaboration tools for seamless care team coordination.</p>
+                </div>
+
+                <!-- Patient Portal Integration -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Patient Portal Integration</h3>
+                    <div class="bg-success-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-success">Lab results shared</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-success">Secure messaging active</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm text-success">Appointment booking enabled</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Seamless patient portal integration for enhanced patient engagement and self-service capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Experience EMR in Action</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Interactive demos showing chart navigation, documentation workflows, and clinical decision support</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Chart Navigation Demo -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Chart Navigation Demo</h3>
+                    <div class="bg-white rounded-lg shadow-soft p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-semibold text-secondary">Patient Chart: Maria Rodriguez</h4>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 bg-primary text-white rounded text-sm">Summary</button>
+                                <button class="px-3 py-1 bg-surface-50 text-text-secondary rounded text-sm">History</button>
+                                <button class="px-3 py-1 bg-surface-50 text-text-secondary rounded text-sm">Labs</button>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-sm text-text-secondary">Age</div>
+                                <div class="font-medium text-secondary">42 years</div>
+                            </div>
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-sm text-text-secondary">Last Visit</div>
+                                <div class="font-medium text-secondary">June 15, 2025</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-primary pl-4">
+                                <div class="text-sm font-medium text-secondary">Active Conditions</div>
+                                <div class="text-sm text-text-secondary">Hypertension, Type 2 Diabetes</div>
+                            </div>
+                            
+                            <div class="border-l-4 border-success pl-4">
+                                <div class="text-sm font-medium text-secondary">Recent Vitals</div>
+                                <div class="text-sm text-text-secondary">BP: 130/85, HR: 72, Weight: 165 lbs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinical Decision Support Demo -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Clinical Decision Support</h3>
+                    <div class="bg-white rounded-lg shadow-soft p-6">
+                        <div class="space-y-4">
+                            <div class="bg-warning-50 rounded-lg p-4">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-warning">Preventive Care Alert</span>
+                                </div>
+                                <p class="text-sm text-warning">Annual eye exam due for diabetic patient. Schedule ophthalmology referral.</p>
+                            </div>
+                            
+                            <div class="bg-primary-50 rounded-lg p-4">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.30z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-primary">Clinical Suggestion</span>
+                                </div>
+                                <p class="text-sm text-primary">Consider ACE inhibitor for hypertension management in diabetic patient.</p>
+                            </div>
+                            
+                            <div class="bg-success-50 rounded-lg p-4">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-success">Quality Measure</span>
+                                </div>
+                                <p class="text-sm text-success">Patient meets diabetes care quality measures for 2025.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provider Testimonials -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Provider Testimonials</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Healthcare professionals share how EMR improved documentation efficiency and patient safety outcomes</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Lisa Chen" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Lisa Chen</h4>
+                            <p class="text-text-muted text-sm">Internal Medicine, San Francisco</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The unified patient chart gives me a complete view of my patients' health history. The clinical decision support has helped me catch potential issues early and improved patient outcomes."</p>
+                    <div class="text-primary font-medium text-sm">40% improvement in documentation efficiency</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dr. Robert Kim" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Robert Kim</h4>
+                            <p class="text-text-muted text-sm">Family Medicine, Chicago</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"Lab integration has streamlined our workflow tremendously. Results flow directly into patient charts, and the trending analysis helps me spot patterns I might have missed."</p>
+                    <div class="text-primary font-medium text-sm">60% reduction in lab result processing time</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg" alt="Dr. Maria Gonzalez" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Maria Gonzalez</h4>
+                            <p class="text-text-muted text-sm">Pediatrics, Miami</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The pediatric templates are perfectly designed for my practice. Growth charts, immunization tracking, and developmental milestones are all integrated seamlessly."</p>
+                    <div class="text-primary font-medium text-sm">90% improvement in immunization tracking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Design Features -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Mobile-Optimized Design</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Chart review and documentation capabilities optimized for point-of-care use on mobile devices</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="bg-surface-50 rounded-lg p-8">
+                        <div class="bg-white rounded-lg shadow-soft p-6 max-w-sm mx-auto">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-semibold text-secondary">Mobile EMR</h3>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-success rounded-full mr-2"></div>
+                                    <span class="text-xs text-success">Synced</span>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="bg-surface-50 rounded-lg p-3">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm font-medium text-secondary">John Smith</span>
+                                        <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Room 101</span>
+                                    </div>
+                                    <div class="text-xs text-text-secondary">Last visit: 2 weeks ago</div>
+                                </div>
+                                
+                                <div class="bg-surface-50 rounded-lg p-3">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm font-medium text-secondary">Maria Garcia</span>
+                                        <span class="text-xs bg-accent-50 text-accent-800 px-2 py-1 rounded">Room 102</span>
+                                    </div>
+                                    <div class="text-xs text-text-secondary">New patient</div>
+                                </div>
+                                
+                                <div class="bg-primary-50 rounded-lg p-3">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm font-medium text-primary">Current: Robert Johnson</span>
+                                        <span class="text-xs bg-primary text-white px-2 py-1 rounded">Room 103</span>
+                                    </div>
+                                    <div class="text-xs text-primary">Annual physical</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 flex space-x-2">
+                                <button class="flex-1 bg-primary text-white py-2 px-4 rounded text-sm">Open Chart</button>
+                                <button class="flex-1 bg-surface-50 text-text-secondary py-2 px-4 rounded text-sm">Quick Note</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Point-of-Care Access</h3>
+                            <p class="text-text-secondary">Access patient charts, review lab results, and document findings directly from your mobile device during patient encounters.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Real-Time Synchronization</h3>
+                            <p class="text-text-secondary">All changes made on mobile devices sync instantly with the main EMR system, ensuring data consistency across all platforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Secure & Compliant</h3>
+                            <p class="text-text-secondary">Enterprise-grade security with biometric authentication and encryption ensures HIPAA compliance on all mobile devices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Calculate Your EMR ROI</h2>
+            <p class="text-xl text-primary-100 mb-8">See how much time and money you'll save with comprehensive EMR implementation</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">40%</div>
+                    <div class="text-primary-100">Reduction in documentation time</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">25%</div>
+                    <div class="text-primary-100">Improvement in patient safety</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">$125k</div>
+                    <div class="text-primary-100">Annual savings per provider</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pricing_roi_calculator.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">
+                    Calculate Your ROI
+                </a>
+                <a href="platform_demo.html" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Request EMR Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+    </script>
+</body>
+</html>

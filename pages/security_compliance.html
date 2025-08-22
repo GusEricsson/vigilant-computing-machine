@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security & Compliance - Clinicmaster</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Comprehensive healthcare data protection with HIPAA compliance, SOC 2 Type II certification, and enterprise-grade security. Trust center for healthcare IT decision makers." />
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+    <!-- Monthly Updatable Status Bar -->
+    <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+        <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+    </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third hover:shadow-modal">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                
+                <!-- Mobile Features Dropdown -->
+                <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-primary-50 overflow-hidden">
+        <div class="absolute inset-0 bg-white/50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                    Enterprise-Grade Security<br />
+                    <span class="text-primary">& Healthcare Compliance</span>
+                </h1>
+                <p class="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
+                    Your patient data is protected by the highest security standards in healthcare technology. Comprehensive HIPAA compliance, SOC 2 Type II certification, and bank-level encryption ensure complete data protection.
+                </p>
+                
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center items-center gap-8 mb-8">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-semibold text-secondary">HIPAA Compliant</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="font-semibold text-secondary">SOC 2 Type II</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-8 h-8 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-semibold text-secondary">256-bit Encryption</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#compliance-docs" class="btn-secondary">Download Compliance Docs</a>
+                    <a href="#security-overview" class="px-6 py-3 bg-white border border-secondary text-secondary rounded-lg font-semibold hover:bg-secondary hover:text-white transition-smooth">Security Overview</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Overview -->
+    <section id="security-overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Multi-Layered Security Architecture</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Bank-level security infrastructure protecting your healthcare data at every layer</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Encryption -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">End-to-End Encryption</h3>
+                    <p class="text-text-secondary mb-4">256-bit AES encryption for data at rest and in transit with TLS 1.3 protocol</p>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• Database encryption at rest</li>
+                        <li>• Encrypted data transmission</li>
+                        <li>• Key rotation every 90 days</li>
+                        <li>• Hardware security modules</li>
+                    </ul>
+                </div>
+
+                <!-- Access Controls -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Role-Based Access Control</h3>
+                    <p class="text-text-secondary mb-4">Multi-factor authentication with granular permission management</p>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• Multi-factor authentication</li>
+                        <li>• Single sign-on (SSO)</li>
+                        <li>• Session timeout controls</li>
+                        <li>• IP address restrictions</li>
+                    </ul>
+                </div>
+
+                <!-- Monitoring -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">24/7 Security Monitoring</h3>
+                    <p class="text-text-secondary mb-4">Real-time threat detection with automated incident response</p>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• Intrusion detection systems</li>
+                        <li>• Automated threat response</li>
+                        <li>• Security incident logging</li>
+                        <li>• Vulnerability scanning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIPAA Compliance Section -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Complete HIPAA Compliance</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Comprehensive implementation of administrative, physical, and technical safeguards</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="HIPAA compliance documentation" class="rounded-lg shadow-modal w-full h-96 object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-6">HIPAA Safeguards Implementation</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">Administrative Safeguards</h4>
+                                <p class="text-text-secondary text-sm">Comprehensive policies, procedures, and workforce training programs</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">Physical Safeguards</h4>
+                                <p class="text-text-secondary text-sm">Secure data centers with biometric access and 24/7 monitoring</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-success-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-secondary mb-2">Technical Safeguards</h4>
+                                <p class="text-text-secondary text-sm">Advanced encryption, access controls, and audit logging systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compliance Documentation -->
+            <div id="compliance-docs" class="bg-white rounded-lg p-8 shadow-modal">
+                <h3 class="text-2xl font-bold text-secondary mb-6 text-center">Downloadable Compliance Resources</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-border rounded-lg p-6 hover:shadow-soft transition-smooth">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                            </svg>
+                            <h4 class="font-semibold text-secondary">HIPAA Compliance Checklist</h4>
+                        </div>
+                        <p class="text-text-secondary text-sm mb-4">Complete audit preparation guide with all required documentation</p>
+                        <button class="text-primary font-medium text-sm hover:text-primary-600 transition-smooth">Download PDF →</button>
+                    </div>
+
+                    <div class="border border-border rounded-lg p-6 hover:shadow-soft transition-smooth">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-accent-800 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+                            </svg>
+                            <h4 class="font-semibold text-secondary">BAA Template</h4>
+                        </div>
+                        <p class="text-text-secondary text-sm mb-4">Business Associate Agreement template for healthcare partnerships</p>
+                        <button class="text-primary font-medium text-sm hover:text-primary-600 transition-smooth">Download Template →</button>
+                    </div>
+
+                    <div class="border border-border rounded-lg p-6 hover:shadow-soft transition-smooth">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <h4 class="font-semibold text-secondary">Security Policies</h4>
+                        </div>
+                        <p class="text-text-secondary text-sm mb-4">Comprehensive security policy documentation and procedures</p>
+                        <button class="text-primary font-medium text-sm hover:text-primary-600 transition-smooth">View Policies →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Certifications -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Industry-Leading Certifications</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Independently verified security and compliance standards</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- SOC 2 Type II -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-20 h-20 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">SOC 2 Type II</h3>
+                    <p class="text-text-secondary mb-6">Comprehensive audit of security, availability, processing integrity, confidentiality, and privacy controls</p>
+                    <div class="space-y-2 text-sm text-text-secondary mb-6">
+                        <div>• Annual third-party audits</div>
+                        <div>• Continuous monitoring</div>
+                        <div>• Detailed control testing</div>
+                    </div>
+                    <button class="text-primary font-medium hover:text-primary-600 transition-smooth">View Certificate →</button>
+                </div>
+
+                <!-- HITRUST CSF -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-20 h-20 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">HITRUST CSF</h3>
+                    <p class="text-text-secondary mb-6">Healthcare-specific security framework certification with rigorous assessment process</p>
+                    <div class="space-y-2 text-sm text-text-secondary mb-6">
+                        <div>• Healthcare industry standard</div>
+                        <div>• Risk-based approach</div>
+                        <div>• Validated assessment</div>
+                    </div>
+                    <button class="text-primary font-medium hover:text-primary-600 transition-smooth">View Certificate →</button>
+                </div>
+
+                <!-- ISO 27001 -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-20 h-20 bg-success-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">ISO 27001</h3>
+                    <p class="text-text-secondary mb-6">International standard for information security management systems with continuous improvement</p>
+                    <div class="space-y-2 text-sm text-text-secondary mb-6">
+                        <div>• Global security standard</div>
+                        <div>• Management system approach</div>
+                        <div>• Continuous improvement</div>
+                    </div>
+                    <button class="text-primary font-medium hover:text-primary-600 transition-smooth">View Certificate →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Protection & Privacy -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-6">Advanced Data Protection</h2>
+                    <p class="text-xl text-text-secondary mb-8">Multi-layered approach to protecting patient health information with industry-leading technologies</p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <h3 class="font-semibold text-secondary mb-3">Encryption Standards</h3>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-text-secondary">
+                                <div>• AES-256 encryption at rest</div>
+                                <div>• TLS 1.3 for data in transit</div>
+                                <div>• Key rotation every 90 days</div>
+                                <div>• Hardware security modules</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <h3 class="font-semibold text-secondary mb-3">Backup & Recovery</h3>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-text-secondary">
+                                <div>• Automated daily backups</div>
+                                <div>• Geographic redundancy</div>
+                                <div>• Point-in-time recovery</div>
+                                <div>• 99.9% uptime guarantee</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <h3 class="font-semibold text-secondary mb-3">Privacy Controls</h3>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-text-secondary">
+                                <div>• Patient consent management</div>
+                                <div>• Data access logging</div>
+                                <div>• Breach notification system</div>
+                                <div>• Right to be forgotten</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Data protection and security" class="rounded-lg shadow-modal w-full h-96 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Trail & Monitoring -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Comprehensive Audit Trails</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Complete logging and monitoring of all system access and data modifications</p>
+            </div>
+
+            <div class="bg-surface-50 rounded-lg p-8">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-secondary mb-6">Audit Capabilities</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-secondary">User Access Logging</h4>
+                                    <p class="text-text-secondary text-sm">Complete record of who accessed what data and when</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-secondary">Data Modification Tracking</h4>
+                                    <p class="text-text-secondary text-sm">Detailed logs of all data changes with before/after values</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-secondary">System Event Monitoring</h4>
+                                    <p class="text-text-secondary text-sm">Real-time monitoring of system events and anomalies</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-secondary">Compliance Reporting</h4>
+                                    <p class="text-text-secondary text-sm">Automated generation of compliance and audit reports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-secondary mb-6">Sample Audit Report</h3>
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <div class="space-y-4 text-sm">
+                                <div class="border-b border-border pb-2">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">User Login</span>
+                                        <span class="text-text-muted">2025-01-15 09:23:45</span>
+                                    </div>
+                                    <div class="text-text-secondary">Dr. Sarah Chen - IP: 192.168.1.100</div>
+                                </div>
+
+                                <div class="border-b border-border pb-2">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Patient Record Access</span>
+                                        <span class="text-text-muted">2025-01-15 09:24:12</span>
+                                    </div>
+                                    <div class="text-text-secondary">Patient ID: 12345 - View Medical History</div>
+                                </div>
+
+                                <div class="border-b border-border pb-2">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Data Modification</span>
+                                        <span class="text-text-muted">2025-01-15 09:28:33</span>
+                                    </div>
+                                    <div class="text-text-secondary">Updated prescription - Medication dosage changed</div>
+                                </div>
+
+                                <div class="pb-2">
+                                    <div class="flex justify-between">
+                                        <span class="font-medium">Session End</span>
+                                        <span class="text-text-muted">2025-01-15 10:15:22</span>
+                                    </div>
+                                    <div class="text-text-secondary">User logout - Session duration: 51m 37s</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IT Manager Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Technical Architecture for IT Managers</h2>
+                <p class="text-xl text-secondary-100 max-w-3xl mx-auto">Detailed technical specifications and integration capabilities</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Security Architecture</h3>
+                    <div class="bg-secondary-800 rounded-lg p-6 mb-8">
+                        <div class="space-y-4 text-sm font-mono">
+                            <div>┌─ Application Layer</div>
+                            <div>│  ├─ WAF (Web Application Firewall)</div>
+                            <div>│  ├─ Load Balancer (SSL Termination)</div>
+                            <div>│  └─ Application Servers (Auto-scaling)</div>
+                            <div>├─ Security Layer</div>
+                            <div>│  ├─ Identity & Access Management</div>
+                            <div>│  ├─ Multi-Factor Authentication</div>
+                            <div>│  └─ Role-Based Access Control</div>
+                            <div>├─ Data Layer</div>
+                            <div>│  ├─ Encrypted Database (AES-256)</div>
+                            <div>│  ├─ Backup & Replication</div>
+                            <div>│  └─ Audit Logging</div>
+                            <div>└─ Infrastructure Layer</div>
+                            <div>   ├─ Private Cloud (AWS/Azure)</div>
+                            <div>   ├─ Network Segmentation</div>
+                            <div>   └─ DDoS Protection</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>RESTful APIs with OAuth 2.0 authentication</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>HL7 FHIR R4 compliance for interoperability</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>SAML 2.0 and OpenID Connect support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>99.9% uptime SLA with 24/7 monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Integration Capabilities</h3>
+                    <div class="space-y-6">
+                        <div class="bg-secondary-800 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3">EMR Systems</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>• Epic MyChart</div>
+                                <div>• Cerner PowerChart</div>
+                                <div>• Allscripts</div>
+                                <div>• athenahealth</div>
+                                <div>• NextGen</div>
+                                <div>• eClinicalWorks</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-secondary-800 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3">Payment Systems</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>• Stripe</div>
+                                <div>• Square</div>
+                                <div>• PayPal</div>
+                                <div>• Authorize.Net</div>
+                                <div>• Braintree</div>
+                                <div>• First Data</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-secondary-800 rounded-lg p-6">
+                            <h4 class="font-semibold mb-3">Lab Systems</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>• Quest Diagnostics</div>
+                                <div>• LabCorp</div>
+                                <div>• BioReference</div>
+                                <div>• ARUP</div>
+                                <div>• Mayo ONE</div>
+                                <div>• Custom HL7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">Download Technical Specs</button>
+                    <button class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-secondary transition-smooth">API Documentation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incident Response -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Incident Response & Security Monitoring</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Proactive threat detection and rapid response protocols</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-6">24/7 Security Operations Center</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-error-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <h4 class="font-semibold text-secondary">Threat Detection</h4>
+                            </div>
+                            <ul class="text-text-secondary text-sm space-y-2">
+                                <li>• Real-time monitoring of all system activities</li>
+                                <li>• AI-powered anomaly detection</li>
+                                <li>• Behavioral analysis and pattern recognition</li>
+                                <li>• Automated threat intelligence feeds</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-warning-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <h4 class="font-semibold text-secondary">Incident Response</h4>
+                            </div>
+                            <ul class="text-text-secondary text-sm space-y-2">
+                                <li>• Automated incident classification</li>
+                                <li>• Immediate containment procedures</li>
+                                <li>• Forensic analysis and investigation</li>
+                                <li>• Customer notification within 1 hour</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 shadow-soft">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <h4 class="font-semibold text-secondary">Recovery & Prevention</h4>
+                            </div>
+                            <ul class="text-text-secondary text-sm space-y-2">
+                                <li>• Rapid system restoration procedures</li>
+                                <li>• Post-incident analysis and reporting</li>
+                                <li>• Security control improvements</li>
+                                <li>• Lessons learned integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://images.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_1280.jpg" alt="Security operations center monitoring" class="rounded-lg shadow-modal w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Security Team -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Questions About Our Security?</h2>
+            <p class="text-xl text-primary-100 mb-8">Our security team is available to discuss your specific compliance requirements and answer any technical questions.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="implementation_support.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">Contact Security Team</a>
+                <a href="platform_demo.html" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">Schedule Security Demo</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+         
+        // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+
+    </script>
+</body>
+</html>

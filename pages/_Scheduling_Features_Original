@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinicmaster | Features | Scheduling</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover Clinicmaster's intelligent scheduling features that eliminate double-bookings, reduce no-shows, and optimize your practice workflow." />
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+    <!-- Monthly Updatable Status Bar -->
+        <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+            <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                
+                <!-- Mobile Features Dropdown -->
+                <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-accent-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                        Intelligent Scheduling That <span class="text-secondary">Eliminates Double-Bookings</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 max-w-2xl">
+                        Transform your appointment management with AI-powered scheduling that reduces no-shows by 30% and optimizes provider availability across multiple locations in real-time.
+                    </p>
+                    
+                    <!-- Key Benefits -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">30% reduction in no-shows</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Zero double-bookings</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">24/7 online booking</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Automated reminders</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="platform_demo.html" class="btn-primary text-center">See Scheduling Demo</a>
+                        <button onclick="scrollToDemo()" class="px-6 py-3 bg-white border border-primary text-primary rounded-lg font-semibold hover:bg-primary-50 transition-smooth text-center">
+                            Try Interactive Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white rounded-lg shadow-modal p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-secondary">Unified Calendar</h3>
+                            <span class="text-sm text-success bg-success-50 px-2 py-1 rounded">Real-time sync</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center p-3 bg-primary-50 rounded-lg">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-secondary">Dr. Smith - Cardiology</p>
+                                    <p class="text-xs text-text-muted">9:00 AM - 10:30 AM</p>
+                                </div>
+                                <span class="text-xs text-primary font-medium">Room 201</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-accent-50 rounded-lg">
+                                <div class="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-secondary">Dr. Johnson - Family</p>
+                                    <p class="text-xs text-text-muted">10:45 AM - 11:45 AM</p>
+                                </div>
+                                <span class="text-xs text-accent-800 font-medium">Room 105</span>
+                            </div>
+                            <div class="flex items-center p-3 bg-surface-100 rounded-lg border-l-4 border-warning">
+                                <div class="w-3 h-3 bg-warning rounded-full mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-secondary">Available Buffer</p>
+                                    <p class="text-xs text-text-muted">12:00 PM - 1:00 PM</p>
+                                </div>
+                                <span class="text-xs text-warning font-medium">Flexible</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Scheduling Engine -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Smart Scheduling Engine</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">AI-powered appointment optimization that learns from your practice patterns and patient preferences</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Intelligent Conflict Resolution</h3>
+                            <p class="text-text-secondary">Automatically detects and prevents scheduling conflicts across providers, rooms, and equipment. Real-time validation ensures zero double-bookings.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Dynamic Buffer Management</h3>
+                            <p class="text-text-secondary">Automatically adjusts appointment spacing based on provider type, procedure complexity, and historical timing patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Multi-Location Synchronization</h3>
+                            <p class="text-text-secondary">Seamlessly coordinate appointments across multiple practice locations with real-time availability updates and provider scheduling.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Scheduling Optimization Dashboard</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Provider Utilization</span>
+                                <span class="text-sm text-success">+15% this month</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Room Efficiency</span>
+                                <span class="text-sm text-primary">+22% this month</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Patient Satisfaction</span>
+                                <span class="text-sm text-accent-800">98% rating</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Self-Scheduling Portal -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Patient Self-Scheduling Portal</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Empower patients to book, reschedule, and manage appointments 24/7 with intelligent availability matching</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-lg shadow-modal p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold text-secondary">Book Appointment</h3>
+                        <div class="flex items-center text-sm text-success">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Available now
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Appointment Type</label>
+                            <select class="w-full p-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                <option>Annual Physical</option>
+                                <option>Follow-up Visit</option>
+                                <option>New Patient Consultation</option>
+                                <option>Specialist Referral</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-secondary mb-2">Preferred Provider</label>
+                            <select class="w-full p-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                <option>Dr. Sarah Chen - Available</option>
+                                <option>Dr. Michael Rodriguez - Available</option>
+                                <option>Dr. Emily Johnson - Next available: Tomorrow</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-secondary mb-2">Date</label>
+                                <input type="date" class="w-full p-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" value="2025-07-20" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-secondary mb-2">Time</label>
+                                <select class="w-full p-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                    <option>9:00 AM</option>
+                                    <option>10:30 AM</option>
+                                    <option>2:00 PM</option>
+                                    <option>3:30 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Real-Time Availability</h3>
+                            <p class="text-text-secondary">Patients see only genuinely available appointment slots, with automatic updates as schedules change.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Intelligent Preferences</h3>
+                            <p class="text-text-secondary">System learns patient preferences for providers, times, and appointment types for smarter suggestions.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5 7.707 6.621a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Instant Confirmations</h3>
+                            <p class="text-text-secondary">Automatic confirmations via email and SMS with calendar integration and pre-appointment instructions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Advanced Scheduling Features</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Comprehensive tools for complex scheduling scenarios and practice optimization</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Recurring Appointments -->
+                <div class="bg-surface-50 rounded-lg p-8 hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Recurring Appointments</h3>
+                    <p class="text-text-secondary mb-4">Set up weekly, monthly, or custom recurring appointments with automatic scheduling and conflict detection.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Flexible patterns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Bulk modifications</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Holiday handling</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Waitlist Management -->
+                <div class="bg-surface-50 rounded-lg p-8 hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Waitlist Automation</h3>
+                    <p class="text-text-secondary mb-4">Automatically notify patients when preferred appointment slots become available with priority ranking.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Priority queuing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Auto-notifications</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Response tracking</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resource Management -->
+                <div class="bg-surface-50 rounded-lg p-8 hover:shadow-modal transition-smooth">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Resource Scheduling</h3>
+                    <p class="text-text-secondary mb-4">Coordinate rooms, equipment, and staff availability to optimize facility utilization and prevent conflicts.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Room management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Equipment booking</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Staff coordination</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automated Reminders -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Multi-Channel Reminder System</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Reduce no-shows by 30% with intelligent, customizable reminders across SMS, email, and voice calls</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- SMS Reminders -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">SMS Reminders</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-text-secondary mb-2">Tomorrow at 2:00 PM</p>
+                        <p class="text-sm text-secondary font-medium">Hi John, this is a reminder of your appointment with Dr. Smith tomorrow at 2:00 PM. Reply CONFIRM to confirm or CANCEL to cancel.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Two-way messaging</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Customizable timing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Instant responses</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Email Reminders -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Email Reminders</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <p class="text-xs text-text-muted mb-2">Subject: Appointment Reminder - Dr. Smith</p>
+                        <p class="text-sm text-secondary">Your appointment is scheduled for tomorrow at 2:00 PM. Please arrive 15 minutes early for check-in.</p>
+                        <div class="mt-2 flex space-x-2">
+                            <button class="px-3 py-1 bg-primary text-white text-xs rounded">Confirm</button>
+                            <button class="px-3 py-1 bg-surface-200 text-secondary text-xs rounded">Reschedule</button>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Rich formatting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Calendar integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Branding options</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Voice Reminders -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Voice Reminders</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-secondary font-medium">Automated Voice Call</span>
+                        </div>
+                        <p class="text-sm text-text-secondary">"Hello, this is a reminder that you have an appointment with Dr. Smith tomorrow at 2:00 PM. Press 1 to confirm or 2 to reschedule."</p>
+                    </div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Natural voice</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Interactive responses</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Multi-language support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Workflow Comparison -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Workflow Transformation</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">See how practices save hours daily by transitioning from manual to automated scheduling</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Before: Manual Process -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-8 h-8 bg-error-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-4 h-4 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary">Before: Manual Scheduling</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start p-4 bg-white rounded-lg border-l-4 border-error">
+                            <div class="flex-shrink-0 text-error mr-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-secondary mb-1">Paper Appointment Books</h4>
+                                <p class="text-sm text-text-secondary">Multiple books, double-bookings, illegible handwriting</p>
+                                <p class="text-xs text-error mt-1">⏱️ 45 minutes daily</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start p-4 bg-white rounded-lg border-l-4 border-error">
+                            <div class="flex-shrink-0 text-error mr-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-secondary mb-1">Manual Reminders</h4>
+                                <p class="text-sm text-text-secondary">Staff calling each patient individually</p>
+                                <p class="text-xs text-error mt-1">⏱️ 2 hours daily</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start p-4 bg-white rounded-lg border-l-4 border-error">
+                            <div class="flex-shrink-0 text-error mr-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-secondary mb-1">Reactive Scheduling</h4>
+                                <p class="text-sm text-text-secondary">Constant firefighting, no-shows, gaps in schedule</p>
+                                <p class="text-xs text-error mt-1">⏱️ 1 hour daily</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-error-50 rounded-lg">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-error mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-error font-medium">Total: 4+ hours daily wasted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- After: Automated Process -->
+                <div class="bg-success-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary">After: Clinicmaster Scheduling</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start p-4 bg-white rounded-lg border-l-4 border-success">
+                            <div class="flex-shrink-0 text-success mr-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-secondary mb-1">Digital Calendar System</h4>
+                                <p class="text-sm text-text-secondary">Real-time sync, conflict detection, mobile access</p>
+                                <p class="text-xs text-success mt-1">⏱️ 5 minutes daily</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start p-4 bg-white rounded-lg border-l-4 border-success">
+                            <div class="flex-shrink-0 text-success mr-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-secondary mb-1">Automated Reminders</h4>
+                                <p class="text-sm text-text-secondary">Multi-channel notifications, automatic responses</p>
+                                <p class="text-xs text-success mt-1">⏱️ 2 minutes daily</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start p-4 bg-white rounded-lg border-l-4 border-success">
+                            <div class="flex-shrink-0 text-success mr-3">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-secondary mb-1">Predictive Scheduling</h4>
+                                <p class="text-sm text-text-secondary">AI optimization, waitlist management, gap filling</p>
+                                <p class="text-xs text-success mt-1">⏱️ 5 minutes daily</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-success-100 rounded-lg">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-success font-medium">Total: 12 minutes daily - 95% time saved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Capabilities -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Seamless Integration Ecosystem</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Connect with your existing systems for unified practice management</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- EMR Integration -->
+                <div class="bg-white rounded-lg p-8 shadow-soft text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">EMR Systems</h3>
+                    <p class="text-text-secondary mb-4">Bi-directional sync with Epic, Cerner, AllScripts, and 50+ EMR platforms</p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full">Epic</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full">Cerner</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full">AllScripts</span>
+                    </div>
+                </div>
+
+                <!-- Billing Integration -->
+                <div class="bg-white rounded-lg p-8 shadow-soft text-center">
+                    <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Billing Platforms</h3>
+                    <p class="text-text-secondary mb-4">Seamless connection with Practice Management and billing systems</p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-success-50 text-success text-sm rounded-full">Athenahealth</span>
+                        <span class="px-3 py-1 bg-success-50 text-success text-sm rounded-full">Kareo</span>
+                        <span class="px-3 py-1 bg-success-50 text-success text-sm rounded-full">AdvancedMD</span>
+                    </div>
+                </div>
+
+                <!-- Communication Tools -->
+                <div class="bg-white rounded-lg p-8 shadow-soft text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Communication Tools</h3>
+                    <p class="text-text-secondary mb-4">Integrate with Twilio, Mailgun, and telephony systems</p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-accent-50 text-accent-800 text-sm rounded-full">Twilio</span>
+                        <span class="px-3 py-1 bg-accent-50 text-accent-800 text-sm rounded-full">Mailgun</span>
+                        <span class="px-3 py-1 bg-accent-50 text-accent-800 text-sm rounded-full">VoIP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Experience the Scheduling Power</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Try our interactive demo to see how scheduling conflicts are resolved in real-time</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Provider Perspective -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Provider Scheduling Dashboard</h3>
+                    <div class="bg-white rounded-lg p-6 shadow-soft">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-medium text-secondary">Today's Schedule</h4>
+                            <div class="flex items-center text-sm text-success">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                95% utilization
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center p-3 bg-primary-50 rounded-lg">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-secondary">John Smith - Annual Physical</p>
+                                    <p class="text-xs text-text-muted">9:00 AM - 10:00 AM • Room 201</p>
+                                </div>
+                                <button class="text-xs text-primary hover:text-primary-600">Reschedule</button>
+                            </div>
+                            <div class="flex items-center p-3 bg-accent-50 rounded-lg">
+                                <div class="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-secondary">Mary Johnson - Follow-up</p>
+                                    <p class="text-xs text-text-muted">10:30 AM - 11:00 AM • Room 105</p>
+                                </div>
+                                <button class="text-xs text-accent-800 hover:text-accent-900">View Chart</button>
+                            </div>
+                            <div class="flex items-center p-3 bg-warning-50 rounded-lg border border-warning-200">
+                                <div class="w-3 h-3 bg-warning rounded-full mr-3"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-secondary">Emergency Slot Available</p>
+                                    <p class="text-xs text-text-muted">11:15 AM - 12:00 PM • Any Room</p>
+                                </div>
+                                <button class="text-xs text-warning-600 hover:text-warning-700">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient Perspective -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Patient Booking Experience</h3>
+                    <div class="bg-white rounded-lg p-6 shadow-soft">
+                        <div class="mb-4">
+                            <h4 class="font-medium text-secondary mb-2">Available Appointments</h4>
+                            <p class="text-sm text-text-secondary">Dr. Sarah Chen - Family Medicine</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <button class="p-3 text-sm bg-primary-50 text-primary rounded-lg hover:bg-primary-100">
+                                Today<br />
+                                <span class="text-xs">2:00 PM</span>
+                            </button>
+                            <button class="p-3 text-sm bg-surface-100 text-text-secondary rounded-lg hover:bg-surface-200">
+                                Tomorrow<br />
+                                <span class="text-xs">9:00 AM</span>
+                            </button>
+                            <button class="p-3 text-sm bg-surface-100 text-text-secondary rounded-lg hover:bg-surface-200">
+                                Thu 7/17<br />
+                                <span class="text-xs">10:30 AM</span>
+                            </button>
+                        </div>
+                        <div class="p-4 bg-success-50 rounded-lg">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-success font-medium">Appointment Confirmed!</span>
+                            </div>
+                            <p class="text-sm text-success mt-1">Today at 2:00 PM with Dr. Chen</p>
+                            <p class="text-xs text-text-secondary mt-2">Confirmation sent via SMS and email</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Calculate Your Scheduling ROI</h2>
+            <p class="text-xl text-primary-100 mb-8">See how much time and money you'll save with intelligent scheduling</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">4.2</div>
+                    <div class="text-primary-100">Hours saved daily</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">$48k</div>
+                    <div class="text-primary-100">Annual staff cost savings</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">15%</div>
+                    <div class="text-primary-100">Increase in bookings</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pricing_roi_calculator.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">
+                    Calculate Your ROI
+                </a>
+                <a href="platform_demo.html" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Request Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+    </script>
+</body>
+</html>

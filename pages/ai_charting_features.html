@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Charting Features - Clinicmaster Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover Clinicmaster's revolutionary AI-powered charting capabilities that reduce documentation time by 2+ hours daily and eliminate provider burnout." />
+</head>
+
+<body class="bg-background">
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+        <!-- Monthly Updatable Status Bar -->
+        <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+            <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+
+                <!-- Mobile Features Dropdown -->
+                <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-secondary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                        AI-Powered Charting <span class="text-secondary">Reduces Documentation Time by 2+ Hours Daily</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 max-w-2xl">
+                        Revolutionary voice-to-text AI with intelligent medical terminology recognition and HIPAA-compliant ambient listening technology that transforms clinical documentation from burden to breeze.
+                    </p>
+                    
+                    <!-- Key Benefits -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">2+ hours saved daily</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">99.7% accuracy rate</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">HIPAA-compliant</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Ambient listening</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="platform_demo.html" class="btn-primary text-center">See AI Charting Demo</a>
+                        <button onclick="scrollToDemo()" class="px-6 py-3 bg-white border border-primary text-primary rounded-lg font-semibold hover:bg-primary-50 transition-smooth text-center">
+                            Try Voice Recognition
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white rounded-lg shadow-modal p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-secondary">AI Voice Charting</h3>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-success rounded-full mr-2 animate-pulse"></div>
+                                <span class="text-sm text-success">Recording...</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="p-3 bg-surface-50 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-secondary">Voice Input</span>
+                                </div>
+                                <p class="text-sm text-text-secondary italic">"Patient presents with chest pain radiating to left arm, onset 2 hours ago..."</p>
+                            </div>
+                            <div class="p-3 bg-primary-50 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-secondary">AI Processing</span>
+                                </div>
+                                <p class="text-sm text-text-secondary">Analyzing medical terminology, extracting key findings, generating structured SOAP note...</p>
+                            </div>
+                            <div class="p-3 bg-success-50 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-sm font-medium text-secondary">Structured Output</span>
+                                </div>
+                                <p class="text-sm text-text-secondary"><strong>Chief Complaint:</strong> Chest pain<br /><strong>Duration:</strong> 2 hours<br /><strong>Radiation:</strong> Left arm<br /><strong>Suggested ICD-10:</strong> R06.02</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Documentation Engine -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Smart Documentation Engine</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Automated SOAP note generation with customizable templates for different specialties and intelligent context-aware suggestions</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Automated SOAP Generation</h3>
+                            <p class="text-text-secondary">AI instantly converts your voice notes into structured SOAP documentation with proper medical terminology and formatting.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Specialty Templates</h3>
+                            <p class="text-text-secondary">Customizable templates for cardiology, orthopedics, family medicine, and 30+ specialties with specialty-specific workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Context-Aware Suggestions</h3>
+                            <p class="text-text-secondary">AI analyzes patient history and provides intelligent suggestions for diagnosis, treatment plans, and follow-up care.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Live SOAP Note Generation</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-primary mb-2">SUBJECTIVE</h4>
+                            <p class="text-sm text-text-secondary">65-year-old male presents with chest pain radiating to left arm, onset 2 hours ago. Pain described as crushing, 8/10 severity. Associated with shortness of breath and diaphoresis. No previous cardiac history.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-primary mb-2">OBJECTIVE</h4>
+                            <p class="text-sm text-text-secondary">Vitals: BP 160/95, HR 110, RR 22, O2 98% RA. Appears in mild distress. Diaphoretic. Cardiac: Tachycardic, regular rhythm. Lungs: Clear bilaterally. Extremities: No edema.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-primary mb-2">ASSESSMENT</h4>
+                            <p class="text-sm text-text-secondary">Acute coronary syndrome, likely STEMI. Differential includes unstable angina, pulmonary embolism.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-primary mb-2">PLAN</h4>
+                            <p class="text-sm text-text-secondary">
+                                <strong>Immediate:</strong> 12-lead ECG, cardiac enzymes, chest X-ray<br />
+                                <strong>Medications:</strong> Aspirin 325mg, Clopidogrel 600mg<br />
+                                <strong>Consult:</strong> Cardiology STAT<br />
+                                <strong>Follow-up:</strong> Serial cardiac enzymes q8h
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Decision Support -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Clinical Decision Support</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">AI-powered diagnostic suggestions, drug interaction alerts, and evidence-based treatment recommendations integrated directly into your charting workflow</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Diagnostic Suggestions -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5 7.707 6.621a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Diagnostic Suggestions</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-secondary">Chest Pain + Radiation</span>
+                            <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">High Priority</span>
+                        </div>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• Acute MI (87% probability)</li>
+                            <li>• Unstable angina (12% probability)</li>
+                            <li>• Pulmonary embolism (1% probability)</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm text-text-secondary">AI analyzes symptoms and patient history to suggest the most likely diagnoses with confidence scores.</p>
+                </div>
+
+                <!-- Drug Interaction Alerts -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-warning-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Drug Interaction Alerts</h3>
+                    <div class="bg-warning-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-4 h-4 text-warning-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm font-medium text-warning-700">Moderate Interaction</span>
+                        </div>
+                        <p class="text-sm text-warning-700">Warfarin + Aspirin may increase bleeding risk. Consider alternative or adjust dosing.</p>
+                    </div>
+                    <p class="text-sm text-text-secondary">Real-time alerts prevent dangerous drug interactions and provide safe alternatives.</p>
+                </div>
+
+                <!-- Evidence-Based Recommendations -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"/>
+                            <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V9a1 1 0 00-1-1h-1v7a2 2 0 01-2 2H5a2 2 0 01-2-2V9a1 1 0 00-1-1H1a1 1 0 110-2h1a2 2 0 012 2v5.5a1.5 1.5 0 003 0V9a1 1 0 011-1h1V7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Evidence-Based Treatment</h3>
+                    <div class="bg-success-50 rounded-lg p-4 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm font-medium text-success">Guideline Match</span>
+                        </div>
+                        <p class="text-sm text-success">AHA/ACC guidelines recommend dual antiplatelet therapy for ACS patients. Consider Clopidogrel 75mg daily.</p>
+                    </div>
+                    <p class="text-sm text-text-secondary">Treatment suggestions based on latest clinical guidelines and peer-reviewed research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automated Coding Assistance -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Automated Coding Assistance</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">AI-powered ICD-10 and CPT code suggestions reduce billing errors by 95% and improve revenue cycle efficiency</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Intelligent Code Suggestions</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Documented Condition</h4>
+                                <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Auto-coded</span>
+                            </div>
+                            <p class="text-sm text-text-secondary mb-3">Acute myocardial infarction, anterior wall</p>
+                            <div class="border-t pt-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm font-medium text-secondary">ICD-10: I21.02</span>
+                                    <span class="text-xs text-success">95% confidence</span>
+                                </div>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-sm font-medium text-secondary">CPT: 99223</span>
+                                    <span class="text-xs text-success">Hospital initial care</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Procedure Performed</h4>
+                                <span class="text-xs bg-accent-50 text-accent-800 px-2 py-1 rounded">Verified</span>
+                            </div>
+                            <p class="text-sm text-text-secondary mb-3">Electrocardiogram, 12-lead</p>
+                            <div class="border-t pt-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm font-medium text-secondary">CPT: 93000</span>
+                                    <span class="text-xs text-success">Exact match</span>
+                                </div>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-sm text-text-secondary">RVU: 0.17</span>
+                                    <span class="text-xs text-text-secondary">Reimbursement: $12.48</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Smart ICD-10 Mapping</h3>
+                            <p class="text-text-secondary">AI analyzes clinical documentation and automatically suggests the most specific and accurate ICD-10 codes with confidence scores.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">CPT Code Optimization</h3>
+                            <p class="text-text-secondary">Automatically identifies the highest-paying appropriate CPT codes for procedures and ensures proper modifier usage.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5 7.707 6.621a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Billing Error Prevention</h3>
+                            <p class="text-text-secondary">Real-time validation prevents common coding errors and flags potential compliance issues before claim submission.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambient Listening Technology -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Ambient Listening Technology</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">HIPAA-compliant hands-free documentation during patient visits with intelligent conversation analysis and automatic PHI redaction</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Hands-Free Documentation</h3>
+                            <p class="text-text-secondary">AI listens to your patient conversation and automatically extracts relevant medical information without interrupting the encounter.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">HIPAA-Compliant Processing</h3>
+                            <p class="text-text-secondary">All voice processing happens in secured, HIPAA-compliant cloud infrastructure with automatic PHI detection and redaction.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Intelligent Conversation Analysis</h3>
+                            <p class="text-text-secondary">AI distinguishes between clinical conversation and casual chat, extracting only medically relevant information for documentation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-modal p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Live Ambient Listening</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-3 bg-surface-50 rounded-lg">
+                            <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-text-secondary italic">"Tell me about your chest pain. When did it start?"</p>
+                                <p class="text-xs text-text-muted mt-1">Doctor speaking - General inquiry</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-3 bg-primary-50 rounded-lg">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-text-secondary italic">"It started about 2 hours ago, feels like crushing pressure, radiates to my left arm."</p>
+                                <p class="text-xs text-text-muted mt-1">Patient response - <span class="text-primary font-medium">Extracting: Onset, Character, Radiation</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-3 bg-success-50 rounded-lg">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-success font-medium">Documented: Chief complaint - chest pain, 2hr onset, crushing, L arm radiation</p>
+                                <p class="text-xs text-text-muted mt-1">Auto-generated documentation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-surface-50 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-success font-medium">HIPAA-Compliant Session</span>
+                        </div>
+                        <p class="text-xs text-text-secondary">All audio processed in encrypted environment. No PHI stored. Patient consent verified.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Learning Capabilities -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Machine Learning Capabilities</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">AI learns from your documentation patterns and preferences to improve accuracy and efficiency over time</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Learning from Patterns -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Provider Learning</h3>
+                    <p class="text-text-secondary mb-4">AI learns your unique documentation style, preferred terminology, and common diagnoses to provide personalized suggestions.</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <div class="text-2xl font-bold text-primary mb-1">97%</div>
+                        <div class="text-sm text-text-secondary">Accuracy improvement after 30 days</div>
+                    </div>
+                </div>
+
+                <!-- Specialty Optimization -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Specialty Adaptation</h3>
+                    <p class="text-text-secondary mb-4">System adapts to specialty-specific workflows, terminologies, and documentation requirements for optimal performance.</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <div class="text-2xl font-bold text-accent-800 mb-1">35+</div>
+                        <div class="text-sm text-text-secondary">Medical specialties supported</div>
+                    </div>
+                </div>
+
+                <!-- Continuous Improvement -->
+                <div class="bg-surface-50 rounded-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-success-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Continuous Learning</h3>
+                    <p class="text-text-secondary mb-4">AI model continuously improves with aggregated learning from millions of clinical encounters while maintaining privacy.</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <div class="text-2xl font-bold text-success mb-1">24/7</div>
+                        <div class="text-sm text-text-secondary">Automatic model updates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Experience AI Charting in Action</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Try our interactive demo to see how voice-to-text and AI documentation work in real patient scenarios</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Voice Input Demo -->
+                <div class="bg-white rounded-lg shadow-modal p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Voice Input Demo</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-center p-8 bg-surface-50 rounded-lg">
+                            <button class="w-24 h-24 bg-primary rounded-full flex items-center justify-center hover:bg-primary-600 transition-smooth">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-text-secondary">Click to start recording</p>
+                            <p class="text-xs text-text-muted mt-1">Try saying: "Patient presents with chest pain, onset 2 hours ago"</p>
+                        </div>
+                        <div class="bg-surface-50 rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-secondary mb-2">Sample Recordings:</h4>
+                            <div class="space-y-2">
+                                <button class="w-full text-left p-3 bg-white rounded-lg hover:bg-primary-50 transition-smooth">
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-sm text-text-secondary">Cardiology consultation</span>
+                                    </div>
+                                </button>
+                                <button class="w-full text-left p-3 bg-white rounded-lg hover:bg-primary-50 transition-smooth">
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="text-sm text-text-secondary">Orthopedic exam</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Output Demo -->
+                <div class="bg-white rounded-lg shadow-modal p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">AI-Generated Documentation</h3>
+                    <div class="space-y-4">
+                        <div class="bg-surface-50 rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-primary mb-2">Real-time Processing</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-success rounded-full mr-3"></div>
+                                    <span class="text-sm text-text-secondary">Voice recognition: 99.7% accuracy</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-success rounded-full mr-3"></div>
+                                    <span class="text-sm text-text-secondary">Medical terminology: Validated</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-warning rounded-full mr-3"></div>
+                                    <span class="text-sm text-text-secondary">SOAP generation: In progress</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-secondary mb-3">Generated SOAP Note</h4>
+                            <div class="space-y-3 text-sm">
+                                <div>
+                                    <span class="font-medium text-primary">S:</span>
+                                    <span class="text-text-secondary ml-2">65-year-old male with acute chest pain, 2-hour onset, crushing quality, radiating to left arm</span>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-primary">O:</span>
+                                    <span class="text-text-secondary ml-2">VS: BP 160/95, HR 110, RR 22. Appears distressed, diaphoretic</span>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-primary">A:</span>
+                                    <span class="text-text-secondary ml-2">Acute coronary syndrome, likely STEMI</span>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-primary">P:</span>
+                                    <span class="text-text-secondary ml-2">12-lead ECG STAT, cardiac enzymes, cardiology consult</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <h4 class="text-sm font-medium text-success mb-2">Auto-Generated Codes</h4>
+                            <div class="space-y-1 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">ICD-10:</span>
+                                    <span class="text-success font-medium">R06.02</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">CPT:</span>
+                                    <span class="text-success font-medium">99214</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Time Savings Analysis -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Dramatic Time Savings</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Before/after time studies showing how AI charting reduces documentation time from 2+ hours to 30 minutes per day</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Before AI Charting -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-8 h-8 bg-error-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-4 h-4 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary">Before: Traditional Documentation</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Manual Chart Entry</span>
+                                <span class="text-error font-medium">45 min</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-error h-2 rounded-full w-3/4"></div>
+                            </div>
+                            <p class="text-xs text-text-secondary mt-1">Typing notes after each patient</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Code Lookup</span>
+                                <span class="text-error font-medium">30 min</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-error h-2 rounded-full w-1/2"></div>
+                            </div>
+                            <p class="text-xs text-text-secondary mt-1">Manual ICD-10 and CPT searching</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Review & Corrections</span>
+                                <span class="text-error font-medium">35 min</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-error h-2 rounded-full w-3/5"></div>
+                            </div>
+                            <p class="text-xs text-text-secondary mt-1">Proofreading and error correction</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-error-50 rounded-lg">
+                        <div class="flex items-center justify-between">
+                            <span class="text-error font-semibold">Total Daily Time:</span>
+                            <span class="text-error font-bold text-xl">2.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- After AI Charting -->
+                <div class="bg-success-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary">After: AI-Powered Charting</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Voice Documentation</span>
+                                <span class="text-success font-medium">15 min</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full w-1/4"></div>
+                            </div>
+                            <p class="text-xs text-text-secondary mt-1">Speak naturally during patient visits</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Auto-Generated Codes</span>
+                                <span class="text-success font-medium">5 min</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full w-1/12"></div>
+                            </div>
+                            <p class="text-xs text-text-secondary mt-1">AI suggests optimal codes automatically</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-secondary">Final Review</span>
+                                <span class="text-success font-medium">10 min</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full w-1/6"></div>
+                            </div>
+                            <p class="text-xs text-text-secondary mt-1">Quick validation of AI-generated notes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-success-100 rounded-lg">
+                        <div class="flex items-center justify-between">
+                            <span class="text-success font-semibold">Total Daily Time:</span>
+                            <span class="text-success font-bold text-xl">30 minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="inline-block bg-primary text-white px-8 py-4 rounded-lg">
+                    <div class="text-2xl font-bold mb-1">80% Time Reduction</div>
+                    <div class="text-primary-100">2 hours saved daily per provider</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provider Testimonials -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Provider Testimonials</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Healthcare professionals share how AI charting improved their work-life balance and patient care</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Sarah Martinez" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Sarah Martinez</h4>
+                            <p class="text-text-muted text-sm">Cardiologist, Houston</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"AI charting has been a game-changer for my practice. I've gone from spending 2-3 hours on documentation to just 30 minutes. I can finally focus on what I love most - patient care."</p>
+                    <div class="text-primary font-medium text-sm">2.5 hours saved daily</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dr. Michael Chen" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Michael Chen</h4>
+                            <p class="text-text-muted text-sm">Family Medicine, Portland</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The ambient listening feature is incredible. I can have natural conversations with patients while the AI handles all the documentation. My patients appreciate the undivided attention."</p>
+                    <div class="text-primary font-medium text-sm">95% patient satisfaction improvement</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg" alt="Dr. Jennifer Kim" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Jennifer Kim</h4>
+                            <p class="text-text-muted text-sm">Orthopedics, Phoenix</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The automated coding feature has eliminated billing errors in my practice. Revenue has increased by 15% due to more accurate and complete documentation."</p>
+                    <div class="text-primary font-medium text-sm">15% revenue increase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Features -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Mobile-Optimized Design</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Voice recording interfaces and streamlined chart review capabilities optimized for tablet use during patient encounters</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="bg-surface-50 rounded-lg p-8">
+                        <div class="bg-white rounded-lg shadow-soft p-6 max-w-sm mx-auto">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-semibold text-secondary">Mobile Voice Chart</h3>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-success rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-xs text-success">Active</span>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mb-6">
+                                <button class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <p class="text-sm text-text-secondary">Tap and hold to record</p>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="bg-surface-50 rounded-lg p-3">
+                                    <div class="flex items-center mb-1">
+                                        <span class="text-xs text-primary font-medium">Patient:</span>
+                                        <span class="text-xs text-text-secondary ml-2">John Smith</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">Chest pain, 2hr onset, crushing, L arm radiation</p>
+                                </div>
+                                
+                                <div class="bg-primary-50 rounded-lg p-3">
+                                    <div class="flex items-center mb-1">
+                                        <span class="text-xs text-primary font-medium">Suggested:</span>
+                                        <span class="text-xs text-success ml-2">ICD-10: R06.02</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">Shortness of breath</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Tablet-Optimized Interface</h3>
+                            <p class="text-text-secondary">Large touch targets, intuitive gesture controls, and readable fonts designed for bedside use on tablets and mobile devices.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">One-Touch Voice Recording</h3>
+                            <p class="text-text-secondary">Simple tap-and-hold interface for voice recording that works reliably even with gloves during patient encounters.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Offline Capability</h3>
+                            <p class="text-text-secondary">Record voice notes offline and sync automatically when connected. Never lose documentation due to connectivity issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Calculate Your AI Charting ROI</h2>
+            <p class="text-xl text-primary-100 mb-8">See how much time and money you'll save with AI-powered documentation</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">2.5</div>
+                    <div class="text-primary-100">Hours saved per provider daily</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">$87k</div>
+                    <div class="text-primary-100">Annual savings per provider</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">95%</div>
+                    <div class="text-primary-100">Reduction in billing errors</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pricing_roi_calculator.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">
+                    Calculate Your ROI
+                </a>
+                <a href="platform_demo.html" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Request Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+    </script>
+</body>
+</html>

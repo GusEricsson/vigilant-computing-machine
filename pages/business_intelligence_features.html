@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Intelligence Features - Clinicmaster Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Transform practice data into actionable insights with Clinicmaster's comprehensive Business Intelligence platform featuring dynamic revenue charts, appointment visualization, and marketing success analytics." />
+</head>
+
+<body class="bg-background">
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+
+    <!-- Monthly Updatable Status Bar -->
+        <div class="bg-primary text-white text-center py-2 text-md font-medium ">
+            <a href="https://ai.clinicmaster.com/">To empower your clinic with Clinicmaster's AI Suite <i><u>Click here</u></i></a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <!-- Logo as Home Button -->
+                <div class="flex-shrink-0 flex items-center">
+                    <button onclick="window.location.href='homepage.html'" class="focus:outline-none">
+                        <img src="../assets/images/logo-horizontal-emblem.svg" alt="Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        
+                        <!-- Features Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleFeaturesDropdown()" class="text-primary font-medium transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Features
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="features-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="platform_demo.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Interactive Highlight</a>
+                                <a href="scheduling_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Scheduling & Case Management</a>
+                                <a href="emr_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Electronic Medical Records</a>
+                                <a href="revenue_cycle_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Revenue Cycle Management</a>
+                                <a href="practice_management_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Practice Management</a>
+                                <a href="client_engagement_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Client Engagement</a>
+                                <a href="business_intelligence_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Business Intelligence</a>
+								<a href="security_compliance.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Security</a>
+                                <a href="integration_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Partner Integrations</a>
+                                <a href="https://ai.clinicmaster.com/" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Suite</a>
+                            </div>
+                        </div>
+                       
+                        
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+
+
+                        <!-- AI Suite Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleAiSuiteDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                AI Suite
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="aisuite-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+                                <a href="ai_charting_features.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Charting</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Receptionist</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Chatbot</a>
+                                <a href="https://ai.clinicmaster.com/en/charting" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">AI Data Explorer</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Resource Hub Dropdown -->
+                        <div class="relative">
+                            <button onclick="toggleResourceHubDropdown()" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm flex items-center">
+                                Resource Hub
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                            <div id="resourcehub-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden">
+								<a href="customer_stories.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Customer Stories Hub</a>
+                                <a href="resources_hub.html" class="block px-4 py-2 text-sm text-text-secondary hover:secondary hover:text-secondary transition-smooth">Healthcare Knowledge Hub</a>
+                            </div>
+                        </div>
+
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-secondary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="platform_demo.html" class="btn-third">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                
+                <!-- Mobile Features Dropdown -->
+                    <div class="block">              
+                    <button onclick="toggleMobileFeaturesDropdown()" class="w-full text-left text-primary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Features
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-features-dropdown" class="pl-6 hidden">
+                    <a href="platform_demo.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Interactive Highlight</a>
+                    <a href="scheduling_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Scheduling & Case Management</a>
+                    <a href="emr_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Electronic Medical Records</a>
+                    <a href="revenue_cycle_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Revenue Cycle Management</a>
+                    <a href="practice_management_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Practice Management</a>
+                    <a href="client_engagement_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Client Engagement</a>
+                    <a href="business_intelligence_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Business Intelligence</a>
+                    <a href="security_compliance.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Security</a>
+                    <a href="integration_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Partner Integrations</a>
+                    <a href="https://ai.clinicmaster.com/" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Suite</a>
+                    </div>    
+                    </div>
+                                
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+
+
+			   <!-- Mobile AI Suite Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileAiSuiteDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        AI Suite
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-aisuite-dropdown" class="pl-6 hidden">
+                    <a href="ai_charting_features.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Charting</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Receptionist</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Chatbot</a>
+                    <a href="https://ai.clinicmaster.com/en/charting" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">AI Data Explorer</a>                    
+                    </div>
+                </div>
+                
+                <!-- Mobile Resource Hub Dropdown -->
+                <div class="block">
+                    <button onclick="toggleMobileResourceHubDropdown()" class="w-full text-left text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium flex items-center justify-between">
+                        Resource Hub
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div id="mobile-resourcehub-dropdown" class="pl-6 hidden">
+						<a href="customer_stories.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Customer Stories Hub</a>
+						<a href="resources_hub.html" class="block px-3 py-2 text-sm text-text-secondary hover:text-secondary rounded-md">Healthcare Knowledge Hub</a>                      
+                    </div>
+                </div>
+                
+                <a href="implementation_support.html" class="text-text-secondary hover:text-secondary block px-3 py-2 rounded-md text-base font-medium">How We Care</a>
+                <a href="platform_demo.html" class="btn-third hover:shadow-modal block text-center mt-4">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-secondary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                        Transform Practice Data into <span class="text-secondary">Strategic Insights</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 max-w-2xl">
+                        Comprehensive Business Intelligence platform that transforms raw practice data into actionable insights for strategic decision-making, revenue optimization, and improved patient outcomes.
+                    </p>
+                    
+                    <!-- Key Benefits -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Real-time dashboards</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Predictive analytics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">Revenue optimization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-text-secondary font-medium">HIPAA-compliant analytics</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="platform_demo.html" class="btn-primary text-center">Explore Analytics Demo</a>
+                        <button onclick="scrollToDemo()" class="px-6 py-3 bg-white border border-primary text-primary rounded-lg font-semibold hover:bg-primary-50 transition-smooth text-center">
+                            View Dashboard Preview
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white rounded-lg shadow-modal p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-secondary">Analytics Dashboard</h3>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-success rounded-full mr-2"></div>
+                                <span class="text-sm text-success">Live Data</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-sm text-text-secondary">Monthly Revenue</div>
+                                <div class="font-bold text-success text-lg">$285,420</div>
+                                <div class="text-xs text-success">+12% vs last month</div>
+                            </div>
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-sm text-text-secondary">Patient Volume</div>
+                                <div class="font-bold text-primary text-lg">1,247</div>
+                                <div class="text-xs text-primary">+8% vs last month</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-primary-50 rounded-lg p-3">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-primary">Revenue Trends</span>
+                                    <span class="text-xs text-primary">↗ +18%</span>
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-accent-50 rounded-lg p-3">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-accent-800">Provider Utilization</span>
+                                    <span class="text-xs text-accent-800">87%</span>
+                                </div>
+                                <div class="w-full bg-accent-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 87%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-success-50 rounded-lg p-3">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-success">Patient Satisfaction</span>
+                                    <span class="text-xs text-success">4.8/5</span>
+                                </div>
+                                <div class="w-full bg-success-100 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 96%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Revenue Charts Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Dynamic Revenue Charts</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Comprehensive financial analytics with interactive charts showing revenue trends, payer mix analysis, procedure profitability, and seasonal patterns with drill-down capabilities</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Revenue Trend Analysis</h3>
+                            <p class="text-text-secondary">Interactive line charts showing revenue patterns over time with the ability to filter by date ranges, providers, and service types for detailed financial insights.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Payer Mix Analysis</h3>
+                            <p class="text-text-secondary">Visual breakdown of revenue sources by insurance type, self-pay, and other payers with profitability analysis for each payment category.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Procedure Profitability</h3>
+                            <p class="text-text-secondary">Detailed analysis of service profitability with margin calculations, cost breakdowns, and recommendations for revenue optimization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Revenue Analytics Dashboard</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Monthly Revenue Growth</h4>
+                                <span class="text-xs bg-success-50 text-success px-2 py-1 rounded">+12%</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">This Month</span>
+                                    <span class="text-secondary font-medium">$285,420</span>
+                                </div>
+                                <div class="w-full bg-surface-50 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Top Revenue Sources</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Commercial Insurance</span>
+                                    <span class="text-secondary">65%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Medicare</span>
+                                    <span class="text-secondary">22%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Self-Pay</span>
+                                    <span class="text-secondary">13%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Most Profitable Procedures</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Wellness Exams</span>
+                                    <span class="text-success">$125 avg</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Specialist Consultations</span>
+                                    <span class="text-success">$280 avg</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Preventive Care</span>
+                                    <span class="text-success">$95 avg</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-primary-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-primary">Revenue Optimization</span>
+                            </div>
+                            <p class="text-sm text-primary">AI-powered recommendations to increase revenue by 15% through service mix optimization and pricing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment and Scheduling Visualization Section -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Appointment and Scheduling Visualization</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Interactive dashboards showing provider utilization rates, appointment type distribution, no-show patterns, and capacity optimization metrics through intuitive charts and heat maps</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Provider Utilization -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Provider Utilization Rates</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Dr. Smith</span>
+                                <span class="text-xs bg-success-50 text-success px-2 py-1 rounded">92%</span>
+                            </div>
+                            <div class="w-full bg-surface-100 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Dr. Johnson</span>
+                                <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">87%</span>
+                            </div>
+                            <div class="w-full bg-surface-100 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 87%"></div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Dr. Williams</span>
+                                <span class="text-xs bg-accent-50 text-accent-800 px-2 py-1 rounded">78%</span>
+                            </div>
+                            <div class="w-full bg-surface-100 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Real-time tracking of provider schedules and patient volume distribution across your practice.</p>
+                </div>
+
+                <!-- Appointment Distribution -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Appointment Type Distribution</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Routine Check-ups</span>
+                                <span class="text-sm font-medium text-secondary">45%</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Follow-up Visits</span>
+                                <span class="text-sm font-medium text-secondary">32%</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Urgent Care</span>
+                                <span class="text-sm font-medium text-secondary">15%</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Consultations</span>
+                                <span class="text-sm font-medium text-secondary">8%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Visual breakdown of appointment types to optimize scheduling and resource allocation.</p>
+                </div>
+
+                <!-- No-Show Patterns -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">No-Show Pattern Analysis</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Overall No-Show Rate</span>
+                                <span class="text-sm font-medium text-warning">8.5%</span>
+                            </div>
+                            <div class="border-l-4 border-warning pl-3">
+                                <div class="text-sm font-medium text-secondary">Peak No-Show Times</div>
+                                <div class="text-xs text-text-secondary">Monday mornings: 12%</div>
+                                <div class="text-xs text-text-secondary">Friday afternoons: 11%</div>
+                            </div>
+                            <div class="border-l-4 border-success pl-3">
+                                <div class="text-sm font-medium text-secondary">Improvement</div>
+                                <div class="text-xs text-success">3% reduction this month</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Identify patterns to reduce no-shows through targeted reminder strategies and scheduling optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Success Visualization Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Marketing Success Visualization</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Comprehensive marketing analytics demonstrating patient acquisition, referral source tracking, campaign ROI measurement, and patient lifetime value calculations with conversion funnel analysis</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Patient Acquisition Analytics</h3>
+                            <p class="text-text-secondary">Track new patient sources, conversion rates, and acquisition costs with detailed attribution analysis to optimize marketing spend and improve ROI.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Referral Source Tracking</h3>
+                            <p class="text-text-secondary">Monitor referral patterns from physicians, online sources, and patient recommendations with detailed conversion tracking and value analysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Campaign ROI Measurement</h3>
+                            <p class="text-text-secondary">Measure the effectiveness of marketing campaigns with detailed ROI calculations, conversion tracking, and patient lifetime value analysis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Marketing Performance Dashboard</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">New Patient Acquisition</h4>
+                                <span class="text-xs bg-success-50 text-success px-2 py-1 rounded">+23%</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">This Month</span>
+                                    <span class="text-secondary font-medium">124 new patients</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Avg. Acquisition Cost</span>
+                                    <span class="text-secondary">$85</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Top Referral Sources</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Google Search</span>
+                                    <span class="text-secondary">35%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Physician Referrals</span>
+                                    <span class="text-secondary">28%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Patient Referrals</span>
+                                    <span class="text-secondary">22%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Social Media</span>
+                                    <span class="text-secondary">15%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Campaign Performance</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Email Campaign ROI</span>
+                                    <span class="text-success">425%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Google Ads ROI</span>
+                                    <span class="text-success">312%</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-text-secondary">Social Media ROI</span>
+                                    <span class="text-success">275%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-primary-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-primary">Patient Lifetime Value</span>
+                            </div>
+                            <p class="text-sm text-primary">Average patient lifetime value: $2,450 with 3.2-year retention rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Analytics Features Section -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Advanced Analytics Features</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Predictive analytics for patient volume forecasting, automated report generation, and customizable alert systems for key performance thresholds</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Predictive Analytics -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Predictive Analytics</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-primary pl-3">
+                                <div class="text-sm font-medium text-secondary">Volume Forecasting</div>
+                                <div class="text-xs text-text-secondary">Next month: 1,380 patients (+8%)</div>
+                            </div>
+                            <div class="border-l-4 border-accent pl-3">
+                                <div class="text-sm font-medium text-secondary">Seasonal Trends</div>
+                                <div class="text-xs text-text-secondary">Flu season peak: October</div>
+                            </div>
+                            <div class="border-l-4 border-success pl-3">
+                                <div class="text-sm font-medium text-secondary">Capacity Planning</div>
+                                <div class="text-xs text-success">Optimal staffing recommendations</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">AI-powered forecasting helps optimize staffing, inventory, and resource allocation for improved efficiency.</p>
+                </div>
+
+                <!-- Automated Reports -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Automated Report Generation</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Daily Summary</span>
+                                <span class="text-xs bg-success-50 text-success px-2 py-1 rounded">Scheduled</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Weekly Performance</span>
+                                <span class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Active</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Monthly Analytics</span>
+                                <span class="text-xs bg-accent-50 text-accent-800 px-2 py-1 rounded">Delivered</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Quarterly Review</span>
+                                <span class="text-xs bg-secondary-50 text-secondary px-2 py-1 rounded">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Customizable automated reports delivered to stakeholders with key metrics, trends, and insights.</p>
+                </div>
+
+                <!-- Alert Systems -->
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-secondary mb-3">Customizable Alert Systems</h3>
+                    <div class="bg-surface-50 rounded-lg p-4 mb-4">
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-warning pl-3">
+                                <div class="text-sm font-medium text-secondary">Revenue Threshold</div>
+                                <div class="text-xs text-warning">Alert when below $250K/month</div>
+                            </div>
+                            <div class="border-l-4 border-primary pl-3">
+                                <div class="text-sm font-medium text-secondary">No-Show Rate</div>
+                                <div class="text-xs text-primary">Alert when above 10%</div>
+                            </div>
+                            <div class="border-l-4 border-success pl-3">
+                                <div class="text-sm font-medium text-secondary">Capacity Utilization</div>
+                                <div class="text-xs text-success">Alert when above 95%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-secondary">Real-time alerts for key performance indicators help you respond quickly to changes and opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Interactive Analytics Demo</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Experience different dashboard configurations, filter data by date ranges and providers, and explore mobile-responsive analytics interfaces</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Dashboard Configuration -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Dashboard Configuration</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Widget Selection</h4>
+                                <button class="text-xs bg-primary-50 text-primary px-2 py-1 rounded">Customize</button>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-success-50 text-success py-2 px-3 rounded text-xs text-center">Revenue Chart</div>
+                                <div class="bg-primary-50 text-primary py-2 px-3 rounded text-xs text-center">Patient Volume</div>
+                                <div class="bg-accent-50 text-accent-800 py-2 px-3 rounded text-xs text-center">Utilization</div>
+                                <div class="bg-secondary-50 text-secondary py-2 px-3 rounded text-xs text-center">Marketing ROI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-sm font-medium text-secondary">Data Filters</h4>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Date Range</span>
+                                    <select class="text-xs border rounded px-2 py-1">
+                                        <option>Last 30 days</option>
+                                        <option>Last 90 days</option>
+                                        <option>Last 12 months</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Provider</span>
+                                    <select class="text-xs border rounded px-2 py-1">
+                                        <option>All Providers</option>
+                                        <option>Dr. Smith</option>
+                                        <option>Dr. Johnson</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Location</span>
+                                    <select class="text-xs border rounded px-2 py-1">
+                                        <option>All Locations</option>
+                                        <option>Main Office</option>
+                                        <option>Satellite Office</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-primary-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-primary">Real-time Updates</span>
+                            </div>
+                            <p class="text-sm text-primary">Dashboard updates automatically with live data from your practice management system.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Interface -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <h3 class="text-xl font-semibold text-secondary mb-6">Mobile Analytics Interface</h3>
+                    <div class="max-w-sm mx-auto bg-white rounded-lg shadow-modal p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-sm font-semibold text-secondary">Analytics Mobile</h4>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-success rounded-full mr-2"></div>
+                                <span class="text-xs text-success">Live</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-xs text-text-secondary mb-1">Today's Revenue</div>
+                                <div class="text-lg font-bold text-success">$12,450</div>
+                                <div class="text-xs text-success">+5% vs yesterday</div>
+                            </div>
+                            
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-xs text-text-secondary mb-1">Appointments</div>
+                                <div class="text-lg font-bold text-primary">47</div>
+                                <div class="text-xs text-primary">3 no-shows</div>
+                            </div>
+                            
+                            <div class="bg-surface-50 rounded-lg p-3">
+                                <div class="text-xs text-text-secondary mb-1">Provider Utilization</div>
+                                <div class="space-y-1">
+                                    <div class="flex justify-between text-xs">
+                                        <span>Dr. Smith</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="w-full bg-surface-100 rounded-full h-1">
+                                        <div class="bg-primary h-1 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                                <button class="bg-primary text-white py-2 px-3 rounded text-xs">View Charts</button>
+                                <button class="bg-accent text-white py-2 px-3 rounded text-xs">Export Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Security Section -->
+    <section class="py-20 bg-surface-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">HIPAA-Compliant Analytics</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Enterprise-grade security with HIPAA-compliant analytics processing and role-based access controls ensure your data remains secure</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">HIPAA Compliance</h3>
+                            <p class="text-text-secondary">All analytics processing meets HIPAA requirements with comprehensive audit trails, access logging, and data de-identification protocols.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Role-Based Access Controls</h3>
+                            <p class="text-text-secondary">Granular permission system ensures staff members only access analytics data relevant to their roles and responsibilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-2">Data Encryption</h3>
+                            <p class="text-text-secondary">End-to-end encryption protects analytics data both in transit and at rest, with regular security audits and compliance monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-8 shadow-soft">
+                    <h3 class="text-lg font-semibold text-secondary mb-6">Security Features</h3>
+                    <div class="space-y-4">
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-success">HIPAA Compliant</span>
+                            </div>
+                            <p class="text-sm text-success">Comprehensive compliance with healthcare data protection regulations</p>
+                        </div>
+                        
+                        <div class="bg-primary-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-primary">256-bit Encryption</span>
+                            </div>
+                            <p class="text-sm text-primary">Military-grade encryption for all analytics data and communications</p>
+                        </div>
+                        
+                        <div class="bg-accent-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-accent-800 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-accent-800">Access Control</span>
+                            </div>
+                            <p class="text-sm text-accent-800">Role-based permissions and multi-factor authentication</p>
+                        </div>
+                        
+                        <div class="bg-secondary-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-4 h-4 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-medium text-secondary">Audit Trails</span>
+                            </div>
+                            <p class="text-sm text-secondary">Complete logging of all data access and analytics activities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provider Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Provider Success Stories</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Healthcare providers share how Business Intelligence features improved decision-making capabilities and achieved significant practice growth</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dr. Michael Chen" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Michael Chen</h4>
+                            <p class="text-text-muted text-sm">Internal Medicine, San Francisco</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The Business Intelligence platform completely transformed how we make decisions. The predictive analytics helped us optimize staffing and reduce costs by 18%. We can now identify revenue opportunities we never saw before."</p>
+                    <div class="text-primary font-medium text-sm">18% cost reduction achieved</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dr. Sarah Martinez" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Sarah Martinez</h4>
+                            <p class="text-text-muted text-sm">Family Medicine, Austin</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The marketing analytics showed us exactly which campaigns were working. We reallocated our budget based on the ROI data and saw a 45% increase in new patient acquisitions within three months."</p>
+                    <div class="text-primary font-medium text-sm">45% increase in new patients</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-surface-50 rounded-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg" alt="Dr. Jennifer Thompson" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Dr. Jennifer Thompson</h4>
+                            <p class="text-text-muted text-sm">Pediatrics, Denver</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1">
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The revenue analytics helped us identify our most profitable services and adjust our pricing strategy. We increased our practice revenue by 25% in just six months by focusing on high-margin procedures."</p>
+                    <div class="text-primary font-medium text-sm">25% revenue increase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Calculate Your Business Intelligence ROI</h2>
+            <p class="text-xl text-primary-100 mb-8">See how much revenue growth and operational efficiency you'll achieve with comprehensive business intelligence analytics</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">25%</div>
+                    <div class="text-primary-100">Average revenue increase</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">18%</div>
+                    <div class="text-primary-100">Cost reduction achieved</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-3xl font-bold mb-2">45%</div>
+                    <div class="text-primary-100">Improvement in decision-making speed</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pricing_roi_calculator.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">
+                    Calculate Your ROI
+                </a>
+                <a href="platform_demo.html" class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Request Analytics Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/logo-horizontal-emblem-white.svg" alt="White Clinicmaster Logo" class="h-8 w-auto" loading="lazy" onerror="handleImgError(this, 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2940&auto=format&fit=crop')" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-white transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-white transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-white transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-white transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+         
+        // Toggle features dropdown for desktop
+                function toggleFeaturesDropdown() {
+            const dropdown = document.getElementById('features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle features dropdown for mobile
+        function toggleMobileFeaturesDropdown() {
+            const dropdown = document.getElementById('mobile-features-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('features-dropdown');
+            const button = event.target.closest('[onclick="toggleFeaturesDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile features dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-features-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileFeaturesDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+        // Toggle resource hub dropdown for desktop
+        function toggleResourceHubDropdown() {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Toggle resource hub dropdown for mobile
+        function toggleMobileResourceHubDropdown() {
+            const dropdown = document.getElementById('mobile-resourcehub-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close resource hub dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resourcehub-dropdown');
+            const button = event.target.closest('[onclick="toggleResourceHubDropdown()"]');
+
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Close mobile resource hub dropdown when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const mobileDropdown = document.getElementById('mobile-resourcehub-dropdown');
+            const mobileButton = event.target.closest('[onclick="toggleMobileResourceHubDropdown()"]');
+            if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                mobileDropdown.classList.add('hidden');
+            }
+        });
+
+                // Toggle AI Suite dropdown for desktop
+        function toggleAiSuiteDropdown() {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+		// Toggle AI Suite dropdown for mobile
+        function toggleMobileAiSuiteDropdown() {
+            const dropdown = document.getElementById('mobile-aisuite-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+         // Close AI Suite dropdown when clicking outside (desktop)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('aisuite-dropdown');
+            const button = event.target.closest('[onclick="toggleAiSuiteDropdown()"]');
+            
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }); 
+         // Close mobile Ai Suite dropdown when clicking outside (mobile)
+         document.addEventListener('click', function(event) {
+             const mobileDropdown = document.getElementById('mobile-aisuite-dropdown');
+             const mobileButton = event.target.closest('[onclick="toggleMobileAiSuiteDropdown()"]');
+            
+				if (!mobileButton && mobileDropdown && !mobileDropdown.contains(event.target)) {
+                 mobileDropdown.classList.add('hidden');
+		       }
+         });
+    </script>
+</body>
+</html>
