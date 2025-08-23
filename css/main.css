@@ -1613,6 +1613,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-secondary{
   --tw-text-opacity: 1;
+  color: rgb(45,25,57 / var(--tw-text-opacity, 1));
+}
+
+.text-secondary-btn{
+  --tw-text-opacity: 1;
   color: rgb(15 110 168 / var(--tw-text-opacity, 1));
 }
 
