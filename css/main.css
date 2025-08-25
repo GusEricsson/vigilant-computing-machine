@@ -1241,6 +1241,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(168 174 197 / var(--tw-bg-opacity, 1));
 }
 
+.bg-background-mulberry{
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 25 57 / var(--tw-bg-opacity, 1));
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
